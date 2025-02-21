@@ -2,6 +2,10 @@
 Curated list of smart contract bugs which could be caught by static analyzers
 
 ## Issues
+### Confidence HIGH
+- self ERC20 transfer: https://gist.github.com/rndquu/1e8a6a755b15a120f16d3ce00b5c3a81
+- transfer to self: https://x.com/bantg/status/1888231508294451525?utm_source=substack&utm_medium=email
+### Confidence UNKNOWN
 - arbitrary `msg.sender` interface: https://solodit.cyfrin.io/issues/h-13-infernalriftbelowclaimroyalties-no-verification-msgsender-sherlock-flayer-git
 - arbitrary contract may be used for `Ownable(msg.sender).owner()`: https://solodit.cyfrin.io/issues/c-01-adversary-can-lock-tokens-forever-for-any-honeylocker-pashov-audit-group-none-interpol-markdown
 - `require()` bypass by arbitrary input address: https://solodit.cyfrin.io/issues/h-04-access-restrictions-on-compoundtonotionalv2notionalcallback-can-be-bypassed-code4rena-notional-notional-git
@@ -66,7 +70,6 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - can't save variable to storage when 63/64 available gas is consumed: https://solodit.cyfrin.io/issues/h-03-users-can-break-the-lz-communication-pashov-audit-group-none-stationx-markdown
 - usage of `balanceOf(address)` instead of storage variable when tokens can be transferred directly to the contract: https://solodit.cyfrin.io/issues/h-07-imprecise-validation-of-deposit-amounts-pashov-audit-group-none-stationx-markdown
 - reentrancy: https://hackernoon.com/hack-solidity-reentrancy-attack
-- self ERC20 transfer: https://gist.github.com/rndquu/1e8a6a755b15a120f16d3ce00b5c3a81
 - empty array length multiplied by variable: https://solodit.cyfrin.io/issues/h-09-dao-creators-can-avoid-paying-creation-fees-pashov-audit-group-none-stationx-markdown
 - buggy OZ version with `SafeERC20.safeIncreaseAllowance()`: https://solodit.cyfrin.io/issues/dos-of-pool-adapters-via-positive-allowance-mixbytes-none-eywa-markdown
 - unsafe `bytes.concat()`: https://solodit.cyfrin.io/issues/signature-verification-bypass-mixbytes-none-eywa-markdown
@@ -148,6 +151,5 @@ Curated list of smart contract bugs which could be caught by static analyzers
  - (rust): rounding error: https://blog.solidityscan.com/zklend-hack-analysis-e494cb794f71
  - subtraction with no state changes: https://solodit.cyfrin.io/issues/repay-does-not-decrease-borrowed-amount-as-expected-cantina-none-eggs-pdf
  - reentrancy: https://solodit.cyfrin.io/issues/the-contract-can-be-drained-of-its-sonic-via-reentrancy-cantina-none-eggs-pdf
- - transfer to self: https://x.com/bantg/status/1888231508294451525?utm_source=substack&utm_medium=email
  - reentrancy: https://blog.solidityscan.com/bankxio-hack-analysis-046a470f6b93
  - signature replay: https://solodit.cyfrin.io/issues/h-01-cross-chain-replay-in-borrowasset-swaptoborrow-kann-audits-none-rwa-markdown
