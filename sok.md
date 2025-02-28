@@ -9,3 +9,4 @@
 - https://app.blocksec.com/explorer/security-incidents
 - https://defillama.com/hacks
 - https://coinsbench.com/how-to-identify-and-prevent-10-hidden-smart-contract-vulnerabilities-that-could-cost-you-millions-e45b735595a6
+- https://www.cyfrin.io/blog/replay-attack-in-ethereum?utm_source=substack&utm_medium=email
