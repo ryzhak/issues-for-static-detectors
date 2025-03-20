@@ -153,3 +153,41 @@ Curated list of smart contract bugs which could be caught by static analyzers
  - reentrancy: https://solodit.cyfrin.io/issues/the-contract-can-be-drained-of-its-sonic-via-reentrancy-cantina-none-eggs-pdf
  - reentrancy: https://blog.solidityscan.com/bankxio-hack-analysis-046a470f6b93
  - signature replay: https://solodit.cyfrin.io/issues/h-01-cross-chain-replay-in-borrowasset-swaptoborrow-kann-audits-none-rwa-markdown
+- `uint32` precision loss: https://solodit.cyfrin.io/issues/loss-of-mint-rewards-due-to-rounding-in-trovemanager-cantina-none-bima-pdf
+- commit-reveal frontrunning: https://github.com/ConsenSys/ens-audit-report-2019-02?tab=readme-ov-file#33-ethregistrarcontrollerregister-is-vulnerable-to-front-running
+- `uint104`: https://solodit.cyfrin.io/issues/index-can-reach-typeuint104max-when-asset-totalsupply-is-dust-and-dos-atoken-transfers-in-spearbit-none-cod3x-lend-pdf
+- missing parameter in `abi.encodeWithSelector()`: https://solodit.cyfrin.io/issues/in-updateatoken-and-updatevariabledebttoken-of-the-lendingpoolconfigurator-encodedcallis-con-spearbit-none-cod3x-lend-pdf
+- reentrancy: https://blog.solidityscan.com/stepheronfts-hack-analysis-d151ae008597
+- using `ERC20.tranfer()` instead of `ERC20.safeTransfer()`: https://solodit.cyfrin.io/issues/token-transfer-logic-is-incorrect-for-some-tokens-cantina-none-megapot-pdf
+- (rust) precision loss: https://blog.solidityscan.com/zklend-hack-analysis-e494cb794f71
+- hardcoded 0 slippage: https://solodit.cyfrin.io/issues/missing-slippage-protection-on-syncswap-swaps-cantina-none-clave-pdf
+- inflation attack: https://solodit.cyfrin.io/issues/using-atokenbalanceof-in-claggaaveadapter_compoundaccounting-allows-for-inflation-at-tacks-cantina-none-clave-pdf
+- reentrancy: https://blog.solidityscan.com/bankxio-hack-analysis-046a470f6b93
+- lack of input validation: https://solodit.cyfrin.io/issues/insufficient-parameter-validation-in-validateinteractions-mixbytes-none-liquorice-markdown
+- unsafe `int => uint` typecasting: https://solodit.cyfrin.io/issues/underflow-of-rate-value-leads-to-incorrect-interest-rate-calculation-mixbytes-none-liquorice-markdown
+- (rust) assignment by value instead of reference: https://solodit.cyfrin.io/issues/improper-mint-limit-reset-ottersec-none-lombard-finance-pdf
+- `safeTransferFrom(account, ...)`, not `msg.sender`: https://solodit.cyfrin.io/issues/anyone-can-call-repayloan-on-the-borrower-and-pull-funds-from-their-account-to-repay-loan-cantina-none-hyperlabs-inc-pdf
+- unchecked + underflow: https://gist.github.com/rndquu/042f3b544582782ee3d97465ada6426b
+- reentrancy: https://blog.solidityscan.com/stepheronfts-hack-analysis-d151ae008597
+- `transfer()` instead of `safeTransfer()`: https://solodit.cyfrin.io/issues/usdt-cannot-be-withdrawn-from-aavev3yieldmanager-cantina-none-level-money-pdf
+- reentrancy: https://solodit.cyfrin.io/issues/an-attacker-can-re-enter-the-infinitypool-contract-to-double-account-when-adding-liquidity-cantina-none-infinitypools-pdf
+- arbitrary address in `transferFrom()`: https://solodit.cyfrin.io/issues/h-01-attacker-can-redirect-funds-to-staking-via-allowances-shieldify-none-beraji-ko-markdown
+- `transferFrom(from, ...)`: https://solodit.cyfrin.io/issues/h-06-malicious-actors-can-exploit-user-approved-allowances-on-vaultrouter-to-drain-their-erc20-tokens-code4rena-bakerfi-bakerfi-git
+- owner from calldata params: https://solodit.cyfrin.io/issues/h-07-malicious-actors-can-exploit-user-approved-allowances-on-vaultrouter-to-drain-their-erc4626-tokens-code4rena-bakerfi-bakerfi-git
+- `ERC20.permit()` frontrun: https://solodit.cyfrin.io/issues/h-05-the-implementation-of-pulltokenswithpermit-poses-a-risk-allowing-malicious-actors-to-steal-tokens-code4rena-bakerfi-bakerfi-git
+- `msg.value` instead of amount: https://solodit.cyfrin.io/issues/h-01-loss-of-user-funds-in-virtualtokens-cashin-function-due-to-incorrect-amount-minting-code4rena-lambowin-lambowin-git
+- precision loss: https://solodit.cyfrin.io/issues/loss-of-fees-for-router-upliftonlyexample-due-to-division-rounding-in-admin-fee-calculation-causing-unfair-fee-distribution-codehawks-quantamm-git
+- decimal number addition instead of multiplication: https://solodit.cyfrin.io/issues/lps-will-not-recieve-their-full-amount-of-collateral-on-redeem-codehawks-zaros-part-2-git
+- `minBptAmountOut: 0`, lack of slippage protection: https://solodit.cyfrin.io/issues/donations-are-sanwichable-to-steal-funds-from-lp-codehawks-quantamm-git
+- arbitrary token address + approve not reset: https://solodit.cyfrin.io/issues/lack-of-approval-reset-on-buffer-allows-anyone-to-drain-the-vault-trailofbits-none-balancer-v3-pdf
+- arbitrary input address: https://solodit.cyfrin.io/issues/lack-of-reserve-updates-when-collecting-fees-allows-anyone-to-drain-the-vault-trailofbits-none-balancer-v3-pdf
+- arbitrary input address: https://solodit.cyfrin.io/issues/vault-can-be-drained-by-updating-the-buffer-underlying-token-trailofbits-none-balancer-v3-pdf
+- possible underflow: https://solodit.cyfrin.io/issues/subtraction-in-variance-will-revert-due-to-underflow-codehawks-swan-dria-git
+- (rust) comparing same variables: https://solodit.cyfrin.io/issues/flawed-version-validation-check-ottersec-none-hop-aggregator-pdf
+- solmate's `SafeTransferLib` succeeds even if token address does not have any code: https://solodit.cyfrin.io/issues/successful-transfers-on-non-existent-tokens-allows-attackers-to-steal-cantina-none-royco-pdf
+- `to` in unput params: https://solodit.cyfrin.io/issues/vulnerability-in-claimfees-function-allows-fee-lockup-cantina-none-royco-pdf
+- `owner` in input params: https://github.com/roycoprotocol/royco/blob/f455475d32eb11cbddc090dd11d48a5f943dcad9/src/ERC4626i.sol#L471
+- arbitrary token address in input struct: https://solodit.cyfrin.io/issues/subversion-of-rate-check-possible-in-vaultorderbookallocateorder-due-to-assignment-to-incorrect-cache-key-cantina-none-royco-pdf
+- arbitrary `from_address`: https://solodit.cyfrin.io/issues/h-07-anyone-can-manipulate-user-nonce-nonce_manager-in-settlement-contract-code4rena-chakra-chakra-git
+- (rust) token decimals in a struct: https://solodit.cyfrin.io/issues/failure-to-validate-initialization-parameters-ottersec-none-etherfuse-stablebond-pdf
+- signature replay: https://solodit.cyfrin.io/issues/cross-organization-signature-replay-halborn-story-proof-of-creativity-protocol-periphery-contracts-markdown
