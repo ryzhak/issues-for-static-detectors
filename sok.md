@@ -16,3 +16,5 @@
 
 ## rust
 - https://github.com/slowmist/solana-smart-contract-security-best-practices?utm_source=substack&utm_medium=email
+- https://medium.com/@dehvcurtis/top-rust-smart-contract-vulnerabilities-a-deep-dive-with-examples-eb36a84c800b
+- 
