@@ -191,3 +191,35 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - arbitrary `from_address`: https://solodit.cyfrin.io/issues/h-07-anyone-can-manipulate-user-nonce-nonce_manager-in-settlement-contract-code4rena-chakra-chakra-git
 - (rust) token decimals in a struct: https://solodit.cyfrin.io/issues/failure-to-validate-initialization-parameters-ottersec-none-etherfuse-stablebond-pdf
 - signature replay: https://solodit.cyfrin.io/issues/cross-organization-signature-replay-halborn-story-proof-of-creativity-protocol-periphery-contracts-markdown
+- `function receive() external payable {}` vs `receive() external payable {}`
+- arbitrary input address: https://solodit.cyfrin.io/issues/h-1-podunwraplocker-can-be-drained-due-to-an-arbitrary-input-sherlock-peapods-git
+- lack of slippage protection: https://solodit.cyfrin.io/issues/h-01-_swap-is-vulnerable-to-sandwich-attacks-pashov-audit-group-none-gacha_2025-01-27-markdown
+- uniswapv2 token order mismatch: https://solodit.cyfrin.io/issues/c-01-incorrect-reserve-order-in-_swap-pashov-audit-group-none-gacha_2025-01-27-markdown
+- additional logic in `onERC721Received()`: https://solodit.cyfrin.io/issues/c-07-unrestricted-omoagentonerc721received-allows-permanent-dos-and-stuck-funds-pashov-audit-group-none-omo_2025-01-25-markdown
+- uniswap v3 wrong pool address: https://solodit.cyfrin.io/issues/h-07-omooracle-wrong-use-of-uniswap-interface-to-get-pool-address-pashov-audit-group-none-omo_2025-01-25-markdown
+- `transferFrom(owner, ...)`: https://solodit.cyfrin.io/issues/h-01-anyone-can-redeem-from-users-and-take-the-funds-pashov-audit-group-none-omo_2025-01-25-markdown
+- `ECDSA.recover()` doesn't check for address(0): https://solodit.cyfrin.io/issues/h-10-_validatesignature-does-not-properly-handle-address0-pashov-audit-group-none-omo_2025-01-25-markdown
+- using Uniswap v3 spot prices in an oracle: https://solodit.cyfrin.io/issues/h-08-omooracle-getliquidityamounts-uses-spot-price-making-it-manipulatable-pashov-audit-group-none-omo_2025-01-25-markdown
+- `transferFrom(from, ...)`: https://solodit.cyfrin.io/issues/h-02-the-transferfrom-in-omoroutersol-has-approval-vulnerabilities-pashov-audit-group-none-omo_2025-01-25-markdown
+- (rust) transfer to the same address: https://solodit.cyfrin.io/issues/inaccurate-in-memory-balance-updates-ottersec-none-code-inc-pdf
+- frontrunning permit2 inside a function: https://www.trust-security.xyz/post/permission-denied
+- (go): `nil` returned instead of error: https://solodit.cyfrin.io/issues/verifyincomingblock-will-return-incorrect-error-status-after-building-optimistic-payload-cantina-none-berachain-pdf
+- not all struct fields are used for signature validation: https://solodit.cyfrin.io/issues/incomplete-payload-validation-in-whitelist-register-halborn-beranames-name-service-bns-contracts-v2-markdown
+- division before multiplication in 2 statements: https://solodit.cyfrin.io/issues/total-price-miscalculation-due-to-rounding-error-halborn-beranames-name-service-bns-contracts-v2-markdown
+- `msg.value` not checked in a `payable` method: https://solodit.cyfrin.io/issues/h-01-excess-payment-when-plugin-owner-reduces-price-shieldify-none-bullasv2-markdown
+- wrong inheritance chain: https://solodit.cyfrin.io/issues/inheritance-conflict-in-decimals-method-ottersec-none-plume-network-pdf
+- Uniswap `sync()` after `transfer()`: https://blog.solidityscan.com/bbx-token-hack-analysis-f2e962c00ee5
+- unrestricted flashloan receiver: https://solodit.cyfrin.io/issues/h-02-the-flashloan-protection-for-zappers-is-insufficient-we-can-operate-on-troves-we-dont-own-recon-audits-none-bold-report-markdown
+- `tstore()` not cleared (+using the same key for address and amount): https://slowmist.medium.com/fatal-residue-an-on-chain-heist-triggered-by-transient-storage-10909e4a255a + https://blog.solidityscan.com/synthetics-implemented-right-sir-hack-analysis-837d328c4c30
+- decreasing same state variables twice: https://solodit.cyfrin.io/issues/the-totalft-and-accretingprincipal-are-updated-incorrectly-in-withdrawassets-cantina-none-term-structure-pdf
+- `uint16` integer overflow: https://solodit.cyfrin.io/issues/h-3-integer-overflow-in-observation-index-calculation-leads-to-denial-of-service-sherlock-yieldoor-git
+- division by `ERC20.decimals()`: https://solodit.cyfrin.io/issues/h-1-liquidation-fee-will-not-be-claimed-due-to-incorrect-decimal-handling-sherlock-yieldoor-git
+- `ERC20.safeTransferFrom(fromAddress, ...)` (not `msg.sender`): https://solodit.cyfrin.io/issues/h-1-anyone-who-is-approving-blueprintv5-contract-to-spend-erc20-can-get-drained-because-paymentpaywitherc20-sherlock-crestal-network-git
+- same entries in the input param array: https://solodit.cyfrin.io/issues/malicious-ip-owner-can-drain-rewards-via-duplicate-entries-in-claimreward-function-halborn-story-proof-of-creativity-protocol-markdown
+- `safeTransferFrom()` without approval on contract to contract tx: https://solodit.cyfrin.io/issues/denial-of-service-caused-by-improper-registration-fee-handling-in-group-ip-account-halborn-story-proof-of-creativity-protocol-markdown
+- unvalidated owner of the input `id` param entity: https://solodit.cyfrin.io/issues/anyone-can-call-the-flashrepayfromcoll-function-for-any-loan-cantina-none-termmax-pdf
+- `delegatecall()` to address from input params: https://solodit.cyfrin.io/issues/termmaxrouterexecuteoperation-doesnt-check-if-adapter-is-whitelisted-before-delegate-calling-cantina-none-termmax-pdf
+- subtracting 2 equal variables: https://solodit.cyfrin.io/issues/division-by-zero-in-quadratic-vote-weight-calculation-halborn-lucid-labs-contracts-v1-markdown
+- none unique addresses in input array: https://solodit.cyfrin.io/issues/bypass-of-bridge-limits-in-burnandbridgemulti-function-halborn-lucid-labs-contracts-v1-markdown
+- unbounded loop: https://solodit.cyfrin.io/issues/hal-07-denial-of-service-in-shtoken-transfers-halborn-superhedge-superhedge-v1-core-markdown
+- unrestricted `burn()`: https://solodit.cyfrin.io/issues/hal-06-anyone-can-burn-shtoken-from-other-users-halborn-superhedge-superhedge-v1-core-markdown
