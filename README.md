@@ -223,3 +223,34 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - none unique addresses in input array: https://solodit.cyfrin.io/issues/bypass-of-bridge-limits-in-burnandbridgemulti-function-halborn-lucid-labs-contracts-v1-markdown
 - unbounded loop: https://solodit.cyfrin.io/issues/hal-07-denial-of-service-in-shtoken-transfers-halborn-superhedge-superhedge-v1-core-markdown
 - unrestricted `burn()`: https://solodit.cyfrin.io/issues/hal-06-anyone-can-burn-shtoken-from-other-users-halborn-superhedge-superhedge-v1-core-markdown
+- zero slippage: https://solodit.cyfrin.io/issues/h-01-lack-of-slippage-and-access-control-in-positionmanagersol-can-result-in-stolen-funds-shieldify-none-surge-markdown
+- hardcoded slippage: https://solodit.cyfrin.io/issues/loss-of-funds-from-protocol-when-swapping-stablecoin-for-bcut-tokens-halborn-bitscrunch-protocol-oct-2023-markdown
+- mutually exclusive `if` condition: https://solodit.cyfrin.io/issues/incorrect-logical-operator-in-tranche-validation-halborn-concrete-hubspokes-library-v1-markdown
+- incorrect bitwise operation order: https://solodit.cyfrin.io/issues/incorrect-encoding-due-to-operation-precedence-halborn-concrete-hubspokes-library-v1-markdown
+- incorrect bit shifting: https://solodit.cyfrin.io/issues/inconsistent-bit-shifting-leading-to-incorrect-permission-handling-halborn-concrete-hubspokes-library-v1-markdown
+- disabled reentrancy guard (Trustswap section): https://medium.com/@olatunjimayowa0396/the-reentrancy-attack-patterns-for-solidity-smart-contract-e0bf90e46b17
+- unrestricted `diamondCut()`: https://solodit.cyfrin.io/issues/c-03-unrestricted-diamondcut-allows-unauthorized-facet-modifications-pashov-audit-group-none-burve_2025-01-29-markdown
+- unrestricted callback: https://solodit.cyfrin.io/issues/c-04-draining-approved-tokens-by-unrestricted-uniswapv3mintcallback-pashov-audit-group-none-burve_2025-01-29-markdown
+- `uint64` overflow: https://solodit.cyfrin.io/issues/potential-overflow-in-accumulator-variables-mixbytes-none-hanji-markdown
+- (go) memory leak: https://solodit.cyfrin.io/issues/h-3-executetallyvm-has-a-memory-leak-which-will-lead-to-nodes-eventually-crashing-sherlock-seda-protocol-git
+- (go) supply chain vulnerability: https://solodit.cyfrin.io/issues/h-7-use-of-vulnerable-ibc-go-v840-non-deterministic-json-unmarshalling-can-cause-chain-halt-sherlock-seda-protocol-git
+- (go) supply chain vulnerability: https://solodit.cyfrin.io/issues/h-18-asa-2025-003-groups-module-can-halt-chain-when-handling-a-malicious-proposal-sherlock-seda-protocol-git
+- signature replay, `nonce` not part of the signature verification: https://solodit.cyfrin.io/issues/signature-does-not-take-all-parameters-into-account-and-can-be-reused-halborn-rfx-exchange-common-pool-markdown
+- (sway) using stale price from Pyth oracle: https://solodit.cyfrin.io/issues/missing-staleness-checks-in-oracle-queries-halborn-swaylend-swaylend-protocol-markdown
+- `receiver` in input params: https://solodit.cyfrin.io/issues/dos-attack-on-user-rewards-in-stakingvault-halborn-altcoinist-staking-markdown
+- variable shadowing: https://solodit.cyfrin.io/issues/incorrect-shares-calculation-due-to-shadowed-variable-halborn-altcoinist-staking-markdown
+- arbitrary input address: https://solodit.cyfrin.io/issues/pendingwithdrawalamount-can-be-arbitrarily-reset-halborn-tagus-labs-v2-markdown
+- infinite loop: https://solodit.cyfrin.io/issues/h-14-an-infinite-loop-in-multifeedistributionsol-withdraw-code4rena-loopfi-loopfi-git
+- contract inherited from OZ `AccessControl` does not call `_setupRole()` in constructor: https://solodit.cyfrin.io/issues/h-04-auravault-inherits-accesscontrol-but-does-not-call-the-_setuprole-function-in-its-constructor-to-set-the-initial-roles-this-leads-to-a-complete-dos-of-the-important-claim-function-rendering-the-contract-unable-to-claim-rewards-code4rena-loopfi-loopfi-git
+- possible underflow: https://solodit.cyfrin.io/issues/h-06-malicious-borrower-can-evade-full-liquidation-in-cdpvaultliquidateposition-by-repaying-small-amounts-of-debt-code4rena-loopfi-loopfi-git
+- typo in `witdraw()`: https://solodit.cyfrin.io/issues/withdrawals-are-blocked-due-to-wrong-function-name-on-the-curve-convex-halborn-entangle-labs-entangle-trillion-markdown
+- (move) using spot price instead of TWAP: https://solodit.cyfrin.io/issues/h-01-domain-pricing-relies-on-pool-price-which-can-be-manipulated-code4rena-initia-initia-git
+- reentrancy: https://blog.solidityscan.com/bankxio-hack-analysis-046a470f6b93
+- precision lost: https://securrtech.medium.com/how-a-minor-rounding-error-cost-a-defi-protocol-millions-5fedcf2b148d
+- hardcoded decimals in calculations: https://solodit.cyfrin.io/issues/broken-protocol-invariant-on-lp-token-decimals-leads-to-unfair-synth-minting-halborn-entangle-labs-entangle-trillion-markdown
+- unsafe typecasting: https://solodit.cyfrin.io/issues/unsafe-casting-leads-to-overflowunderflow-halborn-entangle-labs-entangle-trillion-markdown
+- possible underflow: https://solodit.cyfrin.io/issues/whale-withdrawals-can-get-the-hexstrategy-contract-into-a-dos-state-halborn-winwin-winwin-protocol-markdown
+- `random` in function name, there's nothing (almost) random in blockchain: https://solodit.cyfrin.io/issues/drawrandomnumber-call-can-be-abused-to-alter-the-lottery-results-halborn-winwin-winwin-protocol-markdown
+- using `balanceOf(address(this))` in calculations: https://code4rena.com/reports/2024-07-loopfi#h-15-directly-sending-dust-token-amount-will-slow-down-distribution-in-multifeedistributionsol
+- (rust) public reusable init: https://solodit.cyfrin.io/issues/gorples-bridge-program-initializer-can-be-front-run-halborn-entangle-labs-ngl-bridge-gorples-bridge-markdown
+
