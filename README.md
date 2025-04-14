@@ -3,7 +3,7 @@ Curated list of smart contract bugs which could be caught by static analyzers
 
 ## Issues
 ### Confidence HIGH
-- self ERC20 transfer: https://gist.github.com/rndquu/1e8a6a755b15a120f16d3ce00b5c3a81
+- self ERC20 transfer: https://www.quillaudits.com/blog/hack-analysis/labubu-token-exploit-transfer-logic-flaw
 - transfer to self: https://x.com/bantg/status/1888231508294451525?utm_source=substack&utm_medium=email
 ### Confidence UNKNOWN
 - arbitrary `msg.sender` interface: https://solodit.cyfrin.io/issues/h-13-infernalriftbelowclaimroyalties-no-verification-msgsender-sherlock-flayer-git
