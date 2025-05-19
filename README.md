@@ -3,6 +3,7 @@ Curated list of smart contract bugs which could be caught by static analyzers
 
 ## Issues
 ### Confidence HIGH
+#### erc20-self-transfer
 - self ERC20 transfer: https://www.quillaudits.com/blog/hack-analysis/labubu-token-exploit-transfer-logic-flaw
 - transfer to self: https://x.com/bantg/status/1888231508294451525?utm_source=substack&utm_medium=email
 ### Confidence UNKNOWN
