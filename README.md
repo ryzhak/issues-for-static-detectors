@@ -253,4 +253,40 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - `random` in function name, there's nothing (almost) random in blockchain: https://solodit.cyfrin.io/issues/drawrandomnumber-call-can-be-abused-to-alter-the-lottery-results-halborn-winwin-winwin-protocol-markdown
 - using `balanceOf(address(this))` in calculations: https://code4rena.com/reports/2024-07-loopfi#h-15-directly-sending-dust-token-amount-will-slow-down-distribution-in-multifeedistributionsol
 - (rust) public reusable init: https://solodit.cyfrin.io/issues/gorples-bridge-program-initializer-can-be-front-run-halborn-entangle-labs-ngl-bridge-gorples-bridge-markdown
+- ERC4626 solmate donation attack: https://solodit.cyfrin.io/issues/gmvault-suffers-from-inflation-attacks-halborn-gloop-finance-gmi-and-lending-markdown
+- return value of `mint()` and `redeem()` not checked: https://solodit.cyfrin.io/issues/silent-failure-during-token-minting-on-the-router-contract-halborn-moonwell-contracts-v2-updates-markdown + https://solodit.cyfrin.io/issues/silent-failure-during-token-redemption-on-the-router-contract-halborn-moonwell-contracts-v2-updates-markdown
+- (rust) unrestricted mint: https://solodit.cyfrin.io/issues/any-account-can-mint-infinite-amount-of-gorples-tokens-to-any-compatible-vault-halborn-entangle-labs-gorples-ido-core-markdown
+- `_owner` in function parameters: https://solodit.cyfrin.io/issues/h-13-kelp_finalizecooldown-cannot-claim-the-withdrawal-if-adversary-would-requestwithdrawals-with-dust-amount-for-the-holder-sherlock-notional-leveraged-vaults-pendle-pt-and-vault-incentives-git
+- `payable` method that does not transfer any ETH further: https://solodit.cyfrin.io/issues/issue-with-fee-payment-during-interchain-callback-mixbytes-none-dia-markdown
+- gas griefing: https://ronan.eth.limo/blog/ethereum-gas-dangers/ + https://blog.ethereum.org/2016/06/10/smart-contract-security
+- `_safeMint` reentrancy: https://solodit.cyfrin.io/issues/reentrance-in-partnerfreemint-zokyo-none-heurist-markdown
+- `msg.value` not checked against input parameter: https://solodit.cyfrin.io/issues/incorrect-handling-of-investment-amounts-zokyo-none-devve-markdown
+- `safeTransfer()` not used: https://solodit.cyfrin.io/issues/treasury-is-incompatible-with-usdt-zokyo-none-devve-markdown
+- signature replay: https://solodit.cyfrin.io/issues/gatewayupdatekeys-signatures-can-be-replayed-halborn-analog-labs-gateway-markdown
+- anyone can upgrade contracts (+check for unrestricted `diamondCut()`): https://solodit.cyfrin.io/issues/anyone-can-upgrade-implementation-halborn-orangelayer-stagezero-markdown
+- `safeTransferFrom(someAddress)`, not `msg.sender`: https://solodit.cyfrin.io/issues/vulnerability-in-block-proposal-function-allows-token-theft-phase-1-openzeppelin-none-taiko-protocol-audit-markdown
+- contract not initialized: https://solodit.cyfrin.io/issues/initialization-script-of-taikol2-allows-reinitialization-of-the-rollup-phase-1-openzeppelin-none-taiko-protocol-audit-markdown + https://solodit.cyfrin.io/issues/thecontrollerv2-implementation-can-be-destroyed-by-an-attacker-mixbytes-none-dforce-markdown
+- reentrancy guard on external and internal methods: https://solodit.cyfrin.io/issues/reentrancy-guard-conflict-in-_processvaultrewards-private-function-zokyo-none-starter-markdown
+- `transfer` instead of `safeTransfer`: https://solodit.cyfrin.io/issues/non-standard-erc20-tokens-could-be-locked-in-the-contract-zokyo-none-cyber-finance-markdown
+- wrong NFT approval: https://solodit.cyfrin.io/issues/c-01-nft-stolen-due-to-wrong-approval-validation-project-self-injected-exploit-pashov-audit-group-none-sft-markdown
+- using curve spot price: https://solodit.cyfrin.io/issues/shareprice-can-get-manipulated-zokyo-none-copra-markdown
+- unsafe arbitrary call: https://solodit.cyfrin.io/issues/unsafe-arbitrary-call-ottersec-none-pyth-network-per-pdf
+- `(-amount).toUint256()`: https://solodit.cyfrin.io/issues/h-5-updatepositionfrombalancemargin-function-returns-0-if-amount-to-be-updated-is-negative-sherlock-elfi-git
+- using `ERC20.balanceOf()`: https://solodit.cyfrin.io/issues/h-27-attacker-can-inflate-stake-rewards-as-he-wants-sherlock-elfi-git
+- CCIP unverified sender: https://solodit.cyfrin.io/issues/missing-source-validation-in-ccip-message-handling-cyfrin-none-yieldfi-markdown
+- (rust) self transfer: https://solodit.cyfrin.io/issues/balance-cache-inconsistency-ottersec-none-soroban-governor-pdf
+- ERC20 mint and burn blocked: https://solodit.cyfrin.io/issues/wrong-logic-in-overriding-_update-function-is-blocking-all-mint-and-burn-operations-halborn-steadily-consulting-inc-qoda-dao-markdown
+- using `ERC20.balanceOf()`: https://solodit.cyfrin.io/issues/wrong-implementation-of-swapback-function-causes-multiple-issues-halborn-steadily-consulting-inc-qoda-dao-markdown
+- self vote transfer doubles votes: https://solodit.cyfrin.io/issues/malicious-users-can-double-their-voting-power-cyfrin-none-cyfrin-templedao-v21-markdown
+- uniswap v3 using spot price: https://solodit.cyfrin.io/issues/h-03-adversary-can-prevent-the-launch-of-any-ilo-pool-with-enough-raised-capital-at-any-moment-by-providing-single-sided-liquidity-code4rena-vultisig-vultisig-git
+- vacuous `if`: https://solodit.cyfrin.io/issues/h-03-oraclepoolofferhandler-has-an-invalid-check-on-collateraltokenid-incorrect-loan-offers-can-pass-validation-code4rena-gondi-gondi-git
+- reentrancy ERC721 and ERC1155: https://solodit.cyfrin.io/issues/reentrancy-attack-to-duplicate-nft-tier-to-other-contracts-cantina-none-trugly-labs-pdf
+- solady, contract can be reinitialized: https://solodit.cyfrin.io/issues/h-01-interestratestrategyv1-ownership-can-be-hijacked-0x52-none-hyperstable-markdown
+- ERC1155 reentrancy: https://solodit.cyfrin.io/issues/h-03-sending-child-shares-before-burning-shares-allow-reentrancy-vulnerability-in-parentfundingpoolremovechildshares-0x52-none-ubet-markdown
+- using assembly `stop`: https://solodit.cyfrin.io/issues/h-02-sqrt-function-silently-reverts-the-entire-control-flow-when-a-packed-float-of-0-value-is-passed-code4rena-forte-forte-git
+- arbitrary external call: https://x.com/DecurityHQ/status/1813195945477087718
+- `OZ.execute()` proxy not overridden: https://www.quillaudits.com/blog/hack-analysis/kiloex-exploit-breakdown
+- unchecked low level call: https://solodit.cyfrin.io/issues/h-3-through-rebalance-an-executor-can-drain-100-of-vault-reserves-by-minting-cheap-shares-sherlock-arrakis-valantis-sot-audit-git
+- hash collision: https://solodit.cyfrin.io/issues/hash-collision-in-the-mimc-library-fixed-consensys-none-linea-ens-markdown
+- using spot price: https://solodit.cyfrin.io/issues/h-01-reallocation-depends-on-the-slot0-price-which-can-be-manipulated-code4rena-predy-predy-git
 
