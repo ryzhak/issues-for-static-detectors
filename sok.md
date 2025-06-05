@@ -16,6 +16,7 @@
 - https://github.com/Thomas-EDET/BugBountyWeb3
 - https://github.com/sayan011/Immunefi-bug-bounty-writeups-list
 - https://github.com/TradMod/awesome-audits-checklists
+- https://github.com/pcaversaccio/reentrancy-attacks
 
 ## rust
 - https://github.com/slowmist/solana-smart-contract-security-best-practices?utm_source=substack&utm_medium=email
