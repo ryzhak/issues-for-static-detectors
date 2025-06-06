@@ -18,6 +18,7 @@
 - https://github.com/TradMod/awesome-audits-checklists
 - https://github.com/pcaversaccio/reentrancy-attacks
 - https://www.rareskills.io/post/where-to-find-solidity-reentrancy-attacks
+- https://scsfg.io/hackers/
 
 ## rust
 - https://github.com/slowmist/solana-smart-contract-security-best-practices?utm_source=substack&utm_medium=email
