@@ -19,6 +19,7 @@
 - https://github.com/pcaversaccio/reentrancy-attacks
 - https://www.rareskills.io/post/where-to-find-solidity-reentrancy-attacks
 - https://scsfg.io/hackers/
+- https://medium.com/cyfrin/chainlink-oracle-defi-attacks-93b6cb6541bf
 
 ## rust
 - https://github.com/slowmist/solana-smart-contract-security-best-practices?utm_source=substack&utm_medium=email
