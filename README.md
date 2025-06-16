@@ -290,4 +290,31 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - unchecked low level call: https://solodit.cyfrin.io/issues/h-3-through-rebalance-an-executor-can-drain-100-of-vault-reserves-by-minting-cheap-shares-sherlock-arrakis-valantis-sot-audit-git
 - hash collision: https://solodit.cyfrin.io/issues/hash-collision-in-the-mimc-library-fixed-consensys-none-linea-ens-markdown
 - using spot price: https://solodit.cyfrin.io/issues/h-01-reallocation-depends-on-the-slot0-price-which-can-be-manipulated-code4rena-predy-predy-git
+- division before multiplication: https://solodit.cyfrin.io/issues/rounding-down-in-getclaimableflux-leads-to-less-reward-minting-in-nftclaim-immunefi-alchemix-git
+- lack of slippage protection: https://solodit.cyfrin.io/issues/h-04-multiple-swap-lack-slippage-protection-code4rena-bakerfi-bakerfi-git
+- first depositor inflation attack: https://solodit.cyfrin.io/issues/h-02-vault-is-vulnerable-to-first-depositor-inflation-attack-code4rena-bakerfi-bakerfi-git
+- using `uint8`: http://solodit.cyfrin.io/issues/c-02-user-claimable-reward-tokens-can-be-locked-shieldify-none-yeet-cup-markdown
+- yul variable shadowing: https://solodit.cyfrin.io/issues/inner-variable-shadowing-causes-incorrect-return-in-mloadpotentiallypaddedvalue-openzeppelin-none-evm-emulator-and-semi-abstracted-nonces-update-audit-markdown
+- yul, calculating bytes instead of bits: https://solodit.cyfrin.io/issues/byte-to-bit-mismatch-in-shift-operations-openzeppelin-none-evm-emulator-and-semi-abstracted-nonces-update-audit-markdown
+- invalid signature allowed: https://solodit.cyfrin.io/issues/zero-address-rfqordersigner-allows-unrestricted-order-execution-mixbytes-none-xpress-markdown
+- signature replay: https://solodit.cyfrin.io/issues/h-01-cross-chain-signature-replay-attack-due-to-user-supplied-domainseparator-and-missing-deadline-check-code4rena-next-generation-next-generation-git
+- loop out of gas: https://solodit.cyfrin.io/issues/gettermsinfo-reverts-because-of-block-gas-limit-fixed-consensys-none-metamask-delegation-framework-april-2025-markdown
+- missing result validation for custom ERC20 tokens: https://solodit.cyfrin.io/issues/missing-safe-transfer-validation-in-execution-logic-acknowledged-consensys-none-metamask-delegation-framework-april-2025-markdown
+- division before multiplication: https://solodit.cyfrin.io/issues/precision-loss-in-fluxtokensolgetclaimableflux-immunefi-alchemix-git
+- using `totalSupply()` for balancer pool: https://solodit.cyfrin.io/issues/getactualsupply-should-be-used-instead-of-totalsupply-for-balancer-pools-immunefi-alchemix-git
+- using chainlink stale data: https://blog.solidityscan.com/dexodus-finance-hack-analysis-d699135f575c
+- (move) overflow: https://slowmist.medium.com/slowmist-analysis-of-the-230-million-cetus-hack-ee569af040f2
+- bypassing merkle proof validation: https://github.com/advisories/GHSA-wprv-93r4-jj2p
+- lack of flashloan initiator validation: https://github.com/stakewise/v3-periphery/blob/main/audits/2024-09-Hexens.pdf
+- inflation attack: https://solodit.cyfrin.io/issues/vault-is-vulnerable-to-inflation-attack-zokyo-none-steadefi-markdown
+- loop with fixed iterations: https://solodit.cyfrin.io/issues/withdraw-doesnt-claim-all-rewards-before-burning-token-immunefi-alchemix-git
+- signature replay attack: https://www.quillaudits.com/blog/hack-analysis/dexodus-finance-exploit
+- lack of input validation: https://blog.solidityscan.com/zoth-hack-analysis-80ba3ac5076b
+- flawed signature verification: https://samczsun.com/the-0x-vulnerability-explained/
+- DOS using fixed size array: https://solodit.cyfrin.io/issues/dos-of-withdrawals-through-filling-the-userpointhistory-immunefi-alchemix-git
+- ERC4626 donation attack: https://solodit.cyfrin.io/issues/h-7-an-attacker-can-drain-assets-from-a-closure-by-exploiting-the-noopvault-via-a-donation-attack-sherlock-burve-git
+- using unassigned variable: https://solodit.cyfrin.io/issues/h-6-fee-bypass-in-valuefacetremovevaluesingle-sherlock-burve-git
+- lack of input validation: https://solodit.cyfrin.io/issues/floodplain-selector-extension-does-not-prevent-ifulfillersourceconsideration-callback-from-being-called-within-prepost-hooks-cyfrin-none-bunni-markdown
+- bypassing reentrancy protection: https://solodit.cyfrin.io/issues/pools-configured-with-a-malicious-hook-can-bypass-the-bunnihub-re-entrancy-guard-to-drain-all-raw-balances-and-vault-reserves-of-legitimate-pools-cyfrin-none-bunni-markdown
+- hardcoded exchange rate: https://solodit.cyfrin.io/issues/hardcoded-exchange-rate-leading-to-incorrect-deposits-and-redemptions-codehawks-regnum-aurum-acquisition-corp-core-contracts-git
 
