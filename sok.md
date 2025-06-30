@@ -21,6 +21,8 @@
 - https://scsfg.io/hackers/
 - https://medium.com/cyfrin/chainlink-oracle-defi-attacks-93b6cb6541bf
 - https://quillaudit-upload.s3.ap-southeast-1.amazonaws.com/rwa%20audit%20guideline%2Cpdf1747662719510.pdf
+- https://github.com/0xbok/ecdsa-vuln-poc
+- https://medium.com/@chinmayf/auditors-digest-incorrect-twap-implementations-05285636f21e
 
 ## rust
 - https://github.com/slowmist/solana-smart-contract-security-best-practices?utm_source=substack&utm_medium=email
