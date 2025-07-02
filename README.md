@@ -6,6 +6,10 @@ Curated list of smart contract bugs which could be caught by static analyzers
 #### erc20-self-transfer
 - self ERC20 transfer: https://www.quillaudits.com/blog/hack-analysis/labubu-token-exploit-transfer-logic-flaw
 - transfer to self: https://x.com/bantg/status/1888231508294451525?utm_source=substack&utm_medium=email
+#### ecdsa-zero-address-not-checked-on-invalid-signature
+- `ECDSA.recover()` doesn't check for address(0): https://solodit.cyfrin.io/issues/h-10-_validatesignature-does-not-properly-handle-address0-pashov-audit-group-none-omo_2025-01-25-markdown
+- unexpected 0 address on ECDSA recover: https://kadenzipfel.github.io/smart-contract-vulnerabilities/vulnerabilities/unexpected-ecrecover-null-address.html
+- invalid signature allowed: https://solodit.cyfrin.io/issues/zero-address-rfqordersigner-allows-unrestricted-order-execution-mixbytes-none-xpress-markdown
 ### Confidence UNKNOWN
 - arbitrary `msg.sender` interface: https://solodit.cyfrin.io/issues/h-13-infernalriftbelowclaimroyalties-no-verification-msgsender-sherlock-flayer-git
 - arbitrary contract may be used for `Ownable(msg.sender).owner()`: https://solodit.cyfrin.io/issues/c-01-adversary-can-lock-tokens-forever-for-any-honeylocker-pashov-audit-group-none-interpol-markdown
@@ -16,7 +20,6 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - `saveTransferFrom(_from address)` instead of `msg.sender`: https://solodit.xyz/issues/h-12-malicious-users-can-exploit-residual-allowance-to-steal-assets-code4rena-fractional-fractional-v2-contest-git
 - incorrect assumption regarding `abi.encode`: https://twitter.com/0xKaden/status/1819441985809420589
 - reentrancy: https://solodit.xyz/issues/h-01-expressreceivetoken-can-be-abused-using-reentry-code4rena-axelar-network-axelar-network-git
-- contract does not check that`ecrecover` does not return the zero address as owner which it does if the signature is invalid
 - `ISignatureValidator(_signer)`: https://solodit.xyz/issues/h-04-arbitrary-transactions-possible-due-to-insufficient-signature-validation-code4rena-biconomy-biconomy-smart-contract-wallet-contest-git
 - `safeTransferFrom` reentrancy: https://solodit.xyz/issues/h-02-stealing-fund-by-applying-reentrancy-attack-on-removecollateral-startliquidationauction-and-purchaseliquidationauctionnft-code4rena-backed-protocol-papr-contest-git
 - `if...else if` pattern: https://solodit.xyz/issues/h-1-tradingutils_executetrade-doesnt-check-pretradebalance-properly-sherlock-notional-notional-git
@@ -199,7 +202,6 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - additional logic in `onERC721Received()`: https://solodit.cyfrin.io/issues/c-07-unrestricted-omoagentonerc721received-allows-permanent-dos-and-stuck-funds-pashov-audit-group-none-omo_2025-01-25-markdown
 - uniswap v3 wrong pool address: https://solodit.cyfrin.io/issues/h-07-omooracle-wrong-use-of-uniswap-interface-to-get-pool-address-pashov-audit-group-none-omo_2025-01-25-markdown
 - `transferFrom(owner, ...)`: https://solodit.cyfrin.io/issues/h-01-anyone-can-redeem-from-users-and-take-the-funds-pashov-audit-group-none-omo_2025-01-25-markdown
-- `ECDSA.recover()` doesn't check for address(0): https://solodit.cyfrin.io/issues/h-10-_validatesignature-does-not-properly-handle-address0-pashov-audit-group-none-omo_2025-01-25-markdown
 - using Uniswap v3 spot prices in an oracle: https://solodit.cyfrin.io/issues/h-08-omooracle-getliquidityamounts-uses-spot-price-making-it-manipulatable-pashov-audit-group-none-omo_2025-01-25-markdown
 - `transferFrom(from, ...)`: https://solodit.cyfrin.io/issues/h-02-the-transferfrom-in-omoroutersol-has-approval-vulnerabilities-pashov-audit-group-none-omo_2025-01-25-markdown
 - (rust) transfer to the same address: https://solodit.cyfrin.io/issues/inaccurate-in-memory-balance-updates-ottersec-none-code-inc-pdf
@@ -296,7 +298,6 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - using `uint8`: http://solodit.cyfrin.io/issues/c-02-user-claimable-reward-tokens-can-be-locked-shieldify-none-yeet-cup-markdown
 - yul variable shadowing: https://solodit.cyfrin.io/issues/inner-variable-shadowing-causes-incorrect-return-in-mloadpotentiallypaddedvalue-openzeppelin-none-evm-emulator-and-semi-abstracted-nonces-update-audit-markdown
 - yul, calculating bytes instead of bits: https://solodit.cyfrin.io/issues/byte-to-bit-mismatch-in-shift-operations-openzeppelin-none-evm-emulator-and-semi-abstracted-nonces-update-audit-markdown
-- invalid signature allowed: https://solodit.cyfrin.io/issues/zero-address-rfqordersigner-allows-unrestricted-order-execution-mixbytes-none-xpress-markdown
 - signature replay: https://solodit.cyfrin.io/issues/h-01-cross-chain-signature-replay-attack-due-to-user-supplied-domainseparator-and-missing-deadline-check-code4rena-next-generation-next-generation-git
 - loop out of gas: https://solodit.cyfrin.io/issues/gettermsinfo-reverts-because-of-block-gas-limit-fixed-consensys-none-metamask-delegation-framework-april-2025-markdown
 - missing result validation for custom ERC20 tokens: https://solodit.cyfrin.io/issues/missing-safe-transfer-validation-in-execution-logic-acknowledged-consensys-none-metamask-delegation-framework-april-2025-markdown
