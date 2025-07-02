@@ -23,6 +23,7 @@
 - https://quillaudit-upload.s3.ap-southeast-1.amazonaws.com/rwa%20audit%20guideline%2Cpdf1747662719510.pdf
 - https://github.com/0xbok/ecdsa-vuln-poc
 - https://medium.com/@chinmayf/auditors-digest-incorrect-twap-implementations-05285636f21e
+- https://www.cyfrin.io/blog/solodit-checklist-explained-9-replay-attack
 
 ## rust
 - https://github.com/slowmist/solana-smart-contract-security-best-practices?utm_source=substack&utm_medium=email
