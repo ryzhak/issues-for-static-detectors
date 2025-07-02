@@ -10,6 +10,8 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - `ECDSA.recover()` doesn't check for address(0): https://solodit.cyfrin.io/issues/h-10-_validatesignature-does-not-properly-handle-address0-pashov-audit-group-none-omo_2025-01-25-markdown
 - unexpected 0 address on ECDSA recover: https://kadenzipfel.github.io/smart-contract-vulnerabilities/vulnerabilities/unexpected-ecrecover-null-address.html
 - invalid signature allowed: https://solodit.cyfrin.io/issues/zero-address-rfqordersigner-allows-unrestricted-order-execution-mixbytes-none-xpress-markdown
+#### ecdsa-backdoor
+- backdoor ECDSA lib: https://twitter.com/realScamSniffer/status/1838884343563067864?utm_source=substack&utm_medium=email
 ### Confidence UNKNOWN
 - arbitrary `msg.sender` interface: https://solodit.cyfrin.io/issues/h-13-infernalriftbelowclaimroyalties-no-verification-msgsender-sherlock-flayer-git
 - arbitrary contract may be used for `Ownable(msg.sender).owner()`: https://solodit.cyfrin.io/issues/c-01-adversary-can-lock-tokens-forever-for-any-honeylocker-pashov-audit-group-none-interpol-markdown
@@ -47,7 +49,6 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - reentrancy: https://solodit.cyfrin.io/issues/h03-any-governance-action-could-be-executed-multiple-times-openzeppelin-uma-audit-phase-1-markdown (`assembly` block not supported by semgrep?)
 - uninitialized proxy (`init()` not called in factory): https://solodit.xyz/issues/h-01-vault-implementation-can-be-destroyed-leading-to-loss-of-all-assets-code4rena-fractional-fractional-v2-contest-git
 - functions with the same name discrepancy: https://mirror.xyz/0xF3c0C25090ae1458FC152947Aab57253cB8E0F0F/7dqKrAfS20rr3m_zuCwN80lChYTB0Cniie5IrdiC9ZQ?utm_source=substack&utm_medium=email
-- backdoor ECDSA lib: https://twitter.com/realScamSniffer/status/1838884343563067864?utm_source=substack&utm_medium=email
 - minting `amount` instead of `shares`: https://solodit.xyz/issues/h-01-erc4626-mint-uses-wrong-amount-code4rena-tribe-tribe-turbo-contest-git
 - incorrect `verifyingContract` address in ERC-7739: https://solodit.cyfrin.io/issues/erc-7739-does-not-use-correct-verifyingcontract-address-cantina-none-biconomy-pdf
 - incorrect array removal: https://solodit.cyfrin.io/issues/enable-mode-can-be-frontrun-to-add-policies-for-a-different-permissionid-cantina-none-biconomy-pdf
