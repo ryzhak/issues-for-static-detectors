@@ -317,4 +317,31 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - lack of input validation: https://solodit.cyfrin.io/issues/floodplain-selector-extension-does-not-prevent-ifulfillersourceconsideration-callback-from-being-called-within-prepost-hooks-cyfrin-none-bunni-markdown
 - bypassing reentrancy protection: https://solodit.cyfrin.io/issues/pools-configured-with-a-malicious-hook-can-bypass-the-bunnihub-re-entrancy-guard-to-drain-all-raw-balances-and-vault-reserves-of-legitimate-pools-cyfrin-none-bunni-markdown
 - hardcoded exchange rate: https://solodit.cyfrin.io/issues/hardcoded-exchange-rate-leading-to-incorrect-deposits-and-redemptions-codehawks-regnum-aurum-acquisition-corp-core-contracts-git
+- `mstore` overwrites values: https://x.com/0xKaden/status/1924495270261498096
+- arbitrary address in function parameters: https://solodit.cyfrin.io/issues/lack-of-access-control-in-boostcontrollerupdateuserboost-leading-to-unauthorized-delegation-overwrite-codehawks-regnum-aurum-acquisition-corp-core-contracts-git
+- reassigning the same value `amount = amount`: https://solodit.cyfrin.io/issues/multiple-issues-from-unnecessary-balance-increase-calculation-in-debttokenmint-codehawks-regnum-aurum-acquisition-corp-core-contracts-git
+- unrestricted `ERC4626.mint()`: https://blog.solidityscan.com/meta-pool-hack-analysis-fef7796f2303
+- underflow with user provided input param: https://blog.solidityscan.com/bankroll-network-hack-analysis-5d7cdec35075
+- arbitrary input address: https://solodit.cyfrin.io/issues/h-04-fee-theft-via-arbitrary-contract-impersonation-in-collect-function-in-daoslocker-shieldify-none-daoslive-markdown
+- unsafe `CREATE`: https://solodit.cyfrin.io/issues/h-03-predictable-token-deployment-address-enables-liquidity-pool-exploit-in-finalize-in-daoslive-shieldify-none-daoslive-markdown
+- `Uniswap3.swap()` missing `deadline` param: https://solodit.cyfrin.io/issues/c-02-the-deadline-parameter-in-uniswapv3-swap-causes-sniping-functionality-failure-in-finalize-function-shieldify-none-daoslive-markdown
+- arbitrary input address: https://solodit.cyfrin.io/issues/c-01-complete-drainage-of-vested-tokens-from-claim-in-daovesting-shieldify-none-daoslive-markdown
+- predictable randomness: https://solodit.cyfrin.io/issues/h-01-predictable-randomness-in-activity-outcomes-shieldify-none-penguingotchi-markdown
+- using uniswap spot price: https://solodit.cyfrin.io/issues/h-05-vulnerability-in-positioninteractionfacet-slippage-control-due-to-spot-price-pashov-audit-group-none-hyperhyper_2025-03-30-markdown
+- incorrect implementation of Fenwick tree: https://solodit.cyfrin.io/issues/c-03-incorrect-index-reset-in-fenwick-tree-after-full-withdrawal-pashov-audit-group-none-hyperhyper_2025-03-30-markdown
+- `_from` in function params: https://solodit.cyfrin.io/issues/c-01-delegate-permits-unauthorized-vote-delegation-pashov-audit-group-none-hyperstable_2025-03-19-markdown
+- ERC4626 first deposit attack: https://solodit.cyfrin.io/issues/h-02-first-deposit-front-running-attack-pashov-audit-group-none-burve_2025-03-05-markdown
+- subtracting 1 two times: https://solodit.cyfrin.io/issues/h-03-externalbribeearned-skips-rewards-before-the-last-tokenid-checkpoint-pashov-audit-group-none-kittenswap_2025-05-07-markdown
+- weird `int128()` conversions: https://solodit.cyfrin.io/issues/c-01-split-can-be-abused-to-create-locked-data-with-an-arbitrary-amount-pashov-audit-group-none-kittenswap_2025-05-07-markdown
+- storage key not unique: https://solodit.cyfrin.io/issues/c-03-nav-value-overwrites-last-fee-harvest-time-shieldify-none-harmonixfinance-hyperliquid-markdown
+- `ERC4626.withdraw()` should round up: https://solodit.cyfrin.io/issues/c-02-users-can-exploit-rounding-to-withdraw-excess-assets-from-the-fund-contract-shieldify-none-harmonixfinance-hyperliquid-markdown
+- inflation attack because of incorrect override of `ERC4626.deposit()`: https://solodit.cyfrin.io/issues/c-01-first-depositor-can-inflate-share-price-to-steal-funds-from-subsequent-depositors-shieldify-none-harmonixfinance-hyperliquid-markdown
+- struct with a shared memory instead of copying: https://solodit.cyfrin.io/issues/h-05-incorrect-last_pointblk-calculation-due-to-shared-memory-in-_checkpoint-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- using `safeTransferFrom()` without approval: https://solodit.cyfrin.io/issues/h-03-flash-loan-not-working-due-to-transferfrom-issue-pashov-audit-group-none-astrolab-markdown
+- incorrect role revoking using `Set`: https://solodit.cyfrin.io/issues/h-01-accounts-not-properly-removed-from-roles-upon-revoking-pashov-audit-group-none-astrolab-markdown
+- `owner` in function params: https://solodit.cyfrin.io/issues/c-02-wrong-usage-of-mapping-target-in-cancelredeemrequest-pashov-audit-group-none-astrolab-markdown
+- comparing `address.codehash` which returns 0 on empty code and `keccak256("")` on empty code and none zero nonce (more https://docs.soliditylang.org/en/latest/types.html#address): https://solodit.cyfrin.io/issues/c-01-withdrawing-collateral-and-fees-and-bypassing-trust-safety-mechanism-pashov-audit-group-none-catalyst-markdown
+- `uint256(-amount)`: https://solodit.cyfrin.io/issues/users-can-gain-free-tokens-through-the-bunniswap-swap-functionality-trailofbits-none-bunni-v2-pdf
+- Uniswap v4 insufficient hook validation: https://solodit.cyfrin.io/issues/pools-can-be-drained-via-the-rebalance-mechanism-by-selectively-executing-the-rebalanceorderprehook-and-the-rebalanceorderposthook-trailofbits-none-bunni-v2-pdf
+- Uniswap v4 insufficient validation (of signature?): https://solodit.cyfrin.io/issues/rebalance-mechanism-access-control-can-be-bypassed-trailofbits-none-bunni-v2-pdf
 
