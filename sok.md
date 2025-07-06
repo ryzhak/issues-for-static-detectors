@@ -24,6 +24,7 @@
 - https://github.com/0xbok/ecdsa-vuln-poc
 - https://medium.com/@chinmayf/auditors-digest-incorrect-twap-implementations-05285636f21e
 - https://www.cyfrin.io/blog/solodit-checklist-explained-9-replay-attack
+- https://github.com/the-caliber/Blockchain-bridge-vulnerabilities
 
 ## rust
 - https://github.com/slowmist/solana-smart-contract-security-best-practices?utm_source=substack&utm_medium=email
@@ -35,3 +36,7 @@
 ## move
 - https://x.com/QuillAudits_AI/status/1909537006503199225
 - https://arxiv.org/abs/2505.19047?
+
+## zk
+- https://blog.zksecurity.xyz/posts/circom-pitfalls-1
+
