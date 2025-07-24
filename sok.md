@@ -25,6 +25,7 @@
 - https://medium.com/@chinmayf/auditors-digest-incorrect-twap-implementations-05285636f21e
 - https://www.cyfrin.io/blog/solodit-checklist-explained-9-replay-attack
 - https://github.com/the-caliber/Blockchain-bridge-vulnerabilities
+- https://dacian.me/signature-replay-attacks
 
 ## rust
 - https://github.com/slowmist/solana-smart-contract-security-best-practices?utm_source=substack&utm_medium=email
