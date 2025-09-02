@@ -43,4 +43,5 @@
 
 ## zk
 - https://blog.zksecurity.xyz/posts/circom-pitfalls-1
+- https://blog.openzeppelin.com/developer-guide-to-building-safe-noir-circuits
 
