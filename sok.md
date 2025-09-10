@@ -26,6 +26,7 @@
 - https://www.cyfrin.io/blog/solodit-checklist-explained-9-replay-attack
 - https://github.com/the-caliber/Blockchain-bridge-vulnerabilities
 - https://dacian.me/signature-replay-attacks
+- https://github.com/coinspect/learn-evm-attacks
 
 ## rust
 - https://github.com/slowmist/solana-smart-contract-security-best-practices?utm_source=substack&utm_medium=email
