@@ -38,6 +38,7 @@
 ## move
 - https://x.com/QuillAudits_AI/status/1909537006503199225
 - https://arxiv.org/abs/2505.19047?
+- https://movemaverick.github.io/move-vulnerability-database/
 
 ## tact & func (ton)
 - https://cantina.xyz/blog/secure-contract-development-ton-smart-contract-pitfalls
