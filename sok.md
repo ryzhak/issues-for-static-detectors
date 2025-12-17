@@ -34,6 +34,7 @@
 - https://substack.com/home/post/p-164534668
 - https://secure-contracts.com/not-so-smart-contracts/solana/index.html
 - https://github.com/0xMacro/awesome-solana-security
+- https://x.com/accretion_xyz/status/1995190604939358350
 
 ## move
 - https://x.com/QuillAudits_AI/status/1909537006503199225
