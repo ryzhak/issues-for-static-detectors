@@ -27,6 +27,7 @@
 - https://github.com/the-caliber/Blockchain-bridge-vulnerabilities
 - https://dacian.me/signature-replay-attacks
 - https://github.com/coinspect/learn-evm-attacks
+- https://github.com/0xNazgul/Blockchain-Security-Library
 
 ## rust
 - https://github.com/slowmist/solana-smart-contract-security-best-practices?utm_source=substack&utm_medium=email
