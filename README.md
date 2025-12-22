@@ -346,4 +346,153 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - `uint256(-amount)`: https://solodit.cyfrin.io/issues/users-can-gain-free-tokens-through-the-bunniswap-swap-functionality-trailofbits-none-bunni-v2-pdf
 - Uniswap v4 insufficient hook validation: https://solodit.cyfrin.io/issues/pools-can-be-drained-via-the-rebalance-mechanism-by-selectively-executing-the-rebalanceorderprehook-and-the-rebalanceorderposthook-trailofbits-none-bunni-v2-pdf
 - Uniswap v4 insufficient validation (of signature?): https://solodit.cyfrin.io/issues/rebalance-mechanism-access-control-can-be-bypassed-trailofbits-none-bunni-v2-pdf
+- (go) `txs` actual and provided length mismatch: https://solodit.cyfrin.io/issues/proposer-can-steal-funds-from-the-portal-by-including-malicious-deposits-in-proofs-spearbit-none-op-enclave-pdf
+- `require(value == address(0))`, most likely logical error: https://solodit.cyfrin.io/issues/h-01-router-address-validation-logic-error-prevents-valid-router-assignment-code4rena-audit-507-audit-507-git
+- wrong comparison `if (array.length == 1)` after removing an element: https://solodit.cyfrin.io/issues/h-13-incorrect-debt-tracking-in-_updaterepaymentstate-sherlock-lend-git
+- diff with `Compound`: https://solodit.cyfrin.io/issues/h-1-drainage-of-the-lend-token-reserves-through-repeated-claims-of-the-same-rewards-sherlock-lend-git
+- (rust) improper PDA validation: https://solodit.cyfrin.io/issues/c-02-improper-pda-validation-in-handler-enables-arbitrary-data-clearing-pashov-audit-group-none-gatekeeper_2025-06-28-markdown + https://solodit.cyfrin.io/issues/c-01-critical-pda-validation-flaw-in-append_data_sandwich_validators_bitmap-pashov-audit-group-none-gatekeeper_2025-06-28-markdown
+- unsafe typecasting: https://solodit.cyfrin.io/issues/h-05-funds-can-be-permanently-locked-due-to-unsafe-type-casting-pashov-audit-group-none-kinetiq_2025-02-26-markdown
+- public `ERC4626.mint()` (MetaPool): https://olympixai.medium.com/cork-resupplyfi-meta-pool-hookless-priceless-and-permissionless-losses-deab87623339
+- self transfers: https://solodit.cyfrin.io/issues/h-01-payers-exploit-reentrantsettle-to-bypass-payments-with-self-transfers-pashov-audit-group-none-itos_2025-05-24-markdown
+- multiply by `totalSupply()`: https://solodit.cyfrin.io/issues/more-value-can-be-extracted-by-liquidations-than-expected-due-to-incorrect-transfer-calculations-when-the-violator-does-not-own-the-total-erc-6909-supply-for-each-tokenid-enabled-as-collateral-cyfrin-none-vii-markdown
+- unprotected owner change: https://blog.onesavie.com/unveiling-access-control-in-ethereum-smart-contracts-common-access-control-vulnerabilities-512620e4b31b
+- unprotected `onTokenTransfer`
+- arbitrary sender from bytes input param: https://solodit.cyfrin.io/issues/h-03-the-prepostcheck-is-not-authorizing-the-wallet-parameter-with-msgsender-shieldify-none-etherspot-credibleaccountmodule-markdown
+- lack of auth for `validateUserOp`: https://solodit.cyfrin.io/issues/h-02-in-credibleaccountmodule-the-validateuserop-function-is-not-authenticating-the-sender-shieldify-none-etherspot-credibleaccountmodule-markdown
+- no check for `op.sender == msg.sender`: https://solodit.cyfrin.io/issues/h-01-no-check-for-userop-and-userophash-mismatch-nor-the-validity-of-the-sender-shieldify-none-etherspot-credibleaccountmodule-markdown
+- `userOp` not part of signature: https://solodit.cyfrin.io/issues/c-08-in-resourcelockvalidator-the-validateuserop-function-lacks-sufficient-checks-allowing-draining-of-modularetherspotwallet-balances-shieldify-none-etherspot-credibleaccountmodule-markdown
+- signature replay, `nonce` is not used in a struct used in `MerkleProofLib.verify()`: https://solodit.cyfrin.io/issues/c-07-in-resourcelockvalidator-the-validateuserop-function-is-not-consuming-the-signature-proof-shieldify-none-etherspot-credibleaccountmodule-markdown
+- extracting sender from input param bytes instead of `msg.sender`: https://solodit.cyfrin.io/issues/c-06-anyone-can-uninstall-the-validator-module-from-any-wallet-shieldify-none-etherspot-credibleaccountmodule-markdown
+- `memory` vs `storage`: https://solodit.cyfrin.io/issues/c-04-memory-vs-storage-mismatch-renders-session-state-update-failure-in-validateuserop-shieldify-none-etherspot-credibleaccountmodule-markdown
+- overwriting storage variable with `msg.sender`: https://solodit.cyfrin.io/issues/c-02-unauthorized-session-key-takeover-via-missing-ownership-validation-shieldify-none-etherspot-credibleaccountmodule-markdown + https://solodit.cyfrin.io/issues/c-01-missing-session-key-uniqueness-validation-in-resourcelock-due-to-key-data-overwrite-shieldify-none-etherspot-credibleaccountmodule-markdown
+- lack of signer validation, recovered address is not checked with the signer's address: https://solodit.cyfrin.io/issues/h-01-session-key-can-be-consumed-by-unauthorized-scw-shieldify-none-etherspot-credibleaccountmodule-mitigation-markdown
+- unsafe typecasting from `int` to `uint`: https://solodit.cyfrin.io/issues/integer-underflow-in-_gettargetoutput-due-to-improper-type-casting-openzeppelin-none-openzeppelin-uniswap-hooks-v110-rc-1-audit-markdown
+- assembly memory overwrite: https://solodit.cyfrin.io/issues/incorrect-storage-slot-derivation-breaks-authorization-spearbit-none-uniswap-the-compact-pdf
+- public `setOwner()` (i.e. unprotected storage changing methods), ex: https://solodit.cyfrin.io/issues/anyone-can-set-a-malicious-diamond-address-zokyo-none-filament-markdown + https://solodit.cyfrin.io/issues/h-01-anyone-can-update-the-address-of-the-router-in-the-dcnteth-contract-to-any-address-they-would-like-to-set-code4rena-decent-decent-git
+- setting value in memory instead of storage: https://solodit.cyfrin.io/issues/m-4-admin-can-not-set-the-pool-fee-since-it-is-only-set-in-memory-sherlock-flayer-git
+- passing EIP721 domain separator in function params: https://solodit.cyfrin.io/issues/h-01-cross-chain-signature-replay-attack-due-to-user-supplied-domainseparator-and-missing-deadline-check-code4rena-next-generation-next-generation-git
+- open upgrade: https://solodit.cyfrin.io/issues/h-01-wellupgradeable-can-be-upgraded-by-anyone-code4rena-basin-basin-git + https://solodit.cyfrin.io/issues/anyone-can-upgrade-implementation-halborn-orangelayer-stagezero-markdown
+- wrong `_isApprovedForAll` implementation: https://solodit.cyfrin.io/issues/c-01-nft-stolen-due-to-wrong-approval-validation-project-self-injected-exploit-pashov-audit-group-none-sft-markdown
+- arbitrary input address: https://solodit.cyfrin.io/issues/h-04-arbitrary-transactions-possible-due-to-insufficient-signature-validation-code4rena-biconomy-biconomy-smart-contract-wallet-contest-git
+- (rust) lack of auth validation: https://solodit.cyfrin.io/issues/multiple-vault_gkhan_account-can-be-used-resulting-in-dos-on-complete_vest-cyfrin-none-doryoku-markdown
+- storage variable in proxied contract: https://solodit.cyfrin.io/issues/initialization-upon-declaration-will-not-work-for-proxied-contracts-spearbit-none-kinetiq-lst-pdf
+- (rust) lack of seeds hardening: https://solodit.cyfrin.io/issues/tokens-can-be-redeemed-from-any-sale-quantstamp-exceed-finance-liquid-staking-early-purchase-markdown
+- tautology `require` with `msg.sender`: https://solodit.cyfrin.io/issues/h-5-unauthorized-claim-of-non-evm-chain-refunds-in-claimrefund-function-sherlock-dodo-cross-chain-dex-git
+- missing `msg.value` validation in a payable function: https://solodit.cyfrin.io/issues/h-2-any-attacker-will-steal-accumulated-zrc20-tokens-from-gatewaytransfernative-contract-sherlock-dodo-cross-chain-dex-git
+- division by `IERC20Metadata(capToken).decimals()`: https://solodit.cyfrin.io/issues/wrong-captokendecimals-value-used-in-stakedcapadapterprice-causes-inaccurate-prices-trailofbits-none-cap-labs-covered-agent-protocol-pdf
+- lack of input param address validation: https://solodit.cyfrin.io/issues/unvalidated-_vault-address-in-vaultadapter-allows-interest-rate-manipulation-trailofbits-none-cap-labs-covered-agent-protocol-pdf
+- uniswap v4 rewards can be stolen: https://solodit.cyfrin.io/issues/rewards-can-be-stolen-when-incentivizederc20-tokens-are-recursively-provided-as-liquidity-cyfrin-none-paladin-valkyrie-markdown
+- (go) integer overflow: https://solodit.cyfrin.io/issues/integer-overflow-in-addexternalincentive-function-halborn-elys-network-cosmos-module-markdown
+- unsafe typecasting: https://solodit.cyfrin.io/issues/unsafe-casting-leads-to-overflowunderflow-halborn-entangle-labs-entangle-trillion-markdown
+- `require(ERC721Upgradeable._isAuthorized(msg.sender, msg.sender, tokenId), "FORBIDDEN");`: https://solodit.cyfrin.io/issues/m-7-attacker-can-manipulate-the-lockduration-of-other-users-positions-sherlock-magicsea-the-native-dex-on-the-iotaevm-git
+- using `1e36` leads to overflow: https://solodit.cyfrin.io/issues/m-2-integer-overflow-when-calculating-rewards-sherlock-gamma-locked-staking-contract-git
+- unsafe typecasting: https://solodit.cyfrin.io/issues/m-25-convexstakingwrapperdeposit-depositors-may-lose-their-funds-when-the-_amount-is-huge-code4rena-concur-finance-concur-finance-contest-git
+- Uniswap v2 using spot price: https://solodit.cyfrin.io/issues/minvefxsformaxboost-can-be-manipulated-to-increase-rewards-trailofbits-frax-solidity-pdf
+- ERC20 self transfer: https://solodit.cyfrin.io/issues/c-01-rewards-can-be-stolen-by-transferring-tokens-to-oneself-pashov-audit-group-none-resolv_2025-07-25-markdown
+- arbitrary input addresses: https://solodit.cyfrin.io/issues/h-02-anybody-can-control-a-users-delegate-by-calling-agentvetokenstake-with-1-wei-code4rena-virtuals-protocol-virtuals-protocol-git
+- using `toUint32()` and `toUint96()`: https://solodit.cyfrin.io/issues/reward-distribution-can-be-blocked-by-an-initial-distribution-of-long-duration-cyfrin-none-paladin-valkyrie-markdown + https://solodit.cyfrin.io/issues/reward-tokens-can-become-inaccessible-due-to-revert-when-rewardpertokenstored-is-downcast-and-overflows-cyfrin-none-paladin-valkyrie-markdown
+- unbounded arrays: https://solodit.cyfrin.io/issues/poolrewards-arrays-can-grow-without-bounds-resulting-in-dos-of-core-functionality-cyfrin-none-paladin-valkyrie-markdown
+- broken access for `updateMerkleRoot()`: https://blog.solidityscan.com/superrare-hack-analysis-488d544d89e0
+- ECDSA signature malleability: https://certificate.quantstamp.com/full/primex-finance/179ad629-f166-493b-ad06-16ebf80054af/index.html#findings-qs14
+- reentrancy: https://www.quillaudits.com/blog/hack-analysis/how-gmx-lost-42m
+- lack of input validation: https://www.quillaudits.com/blog/hack-analysis/arcadia-finance-hack-analysis
+- (js) prototype pollution: https://solodit.cyfrin.io/issues/remove_timestamp_cache-prototype-pollution-leading-crashed-node-immunefi-shardeum-core-git + https://solodit.cyfrin.io/issues/improper-input-validation-in-transactionconsenu-immunefi-shardeum-core-git + https://solodit.cyfrin.io/issues/in-remove_timestamp_cache-a-prototype-pollution-bricks-validators-immunefi-shardeum-core-git + https://solodit.cyfrin.io/issues/in-get_tx_timestamp-a-prototype-pollution-bricks-validators-immunefi-shardeum-core-git
+- `user` in input params + usage of `msg.sender`: https://quillaudits.notion.site/Understanding-of-Staking-Contracts-and-Their-Security-2259ecabd6a88066823df35d2c44cee8 (issue 1,2)
+- (js) using object instead of array: https://solodit.cyfrin.io/issues/a-missing-check-for-the-type-of-a-variable-allows-a-maliciously-crafted-message-to-unexpectedly-remove-validators-from-the-network-immunefi-shardeum-core-git + https://solodit.cyfrin.io/issues/improper-input-validation-in-fixdeserializedwra-immunefi-shardeum-core-git
+- (js) infinite loop from input params: https://solodit.cyfrin.io/issues/infinite-loop-in-shardeum-immunefi-shardeum-core-git + https://solodit.cyfrin.io/issues/a-math-quirk-in-javascript-allows-anyone-to-take-down-any-validator-or-the-full-network-with-an-http-get-request-immunefi-shardeum-core-git + https://solodit.cyfrin.io/issues/shardeum-validator-bypass-loop-breaking-increme-immunefi-shardeum-core-git + https://solodit.cyfrin.io/issues/improper-input-validation-leads-to-dos-and-tota-immunefi-shardeum-core-git
+- incorrect integration of ERC3156 (flashloans): https://solodit.cyfrin.io/issues/incorrect-flashloan-integration-quantstamp-yield-basis-markdown
+- using `balanceOf()` and flashloans: https://solodit.cyfrin.io/issues/flash-loan-attack-on-gauge-reward-distribution-via-get_adjustment-manipulation-mixbytes-none-yield-basis-markdown
+- using `signatures.length` instead of `signers.length`: https://solodit.cyfrin.io/issues/h-1-consensuschecksignatures-doesnt-check-duplication-of-signers-sherlock-mellow-flexible-vaults-git
+- signature replay: https://solodit.cyfrin.io/issues/signature-replay-attack-possible-between-stake-unstake-and-reward-functions-enabling-unauthorized-token-claims-quantstamp-sapien-markdown
+- using `type(uint104).max`: https://solodit.cyfrin.io/issues/index-can-reach-typeuint104max-when-asset-totalsupply-is-dust-and-dos-atoken-transfers-in-spearbit-none-astera-pdf
+- `ERC721` reentrancy: https://ackee.xyz/blog/reentrancy-attack-in-erc-721/
+- honeypots: https://x.com/ninja_dev3/status/1955018838438973583?t=Z20L3fT1WGft98F6Xi8v1A
+- lack of input validation: https://x.com/SuplabsYi/status/1955230173365961128
+- unsafe typecasting: https://solodit.cyfrin.io/issues/use-of-unsafe-cast-operation-may-lead-to-incorrect-accounting-quantstamp-sperax-farms-markdown
+- price manipulation via `uniswapRouter.getAmountsOut()`: https://x.com/TikkalaResearch/status/1957500585965678828
+- chainlink stale data (SPE-2): https://github.com/Sperax/USDs-v2/blob/main/audit/Quantstamp-USDsV2-Audit.pdf
+- lack of input validation: https://x.com/shoucccc/status/1960534610485633369
+- empty `catch` error block: `try IOracle(favorOracle).update() {} catch {}`
+- hardcoded deadline: https://zokyo.io/reports/betterbank (MEDIUM-1)
+- using uninitialized address: https://solodit.cyfrin.io/issues/user-pending-rewards-can-never-be-paid-out-quantstamp-intentx-markdown
+- incorrect array removal in assembly: https://solodit.cyfrin.io/issues/swap-and-pop-without-index-fix-up-corrupts-positions-fungible-array-cyfrin-none-licredity-markdown
+- using `address(this).balance` ([MNBD1-4]): https://github.com/solodit/solodit_content/blob/main/reports/Hexens/2025-05-26-Moonbound.md
+- flashloan callback must be called only by current contract: https://solodit.cyfrin.io/issues/stake-6-unprotected-flash-loan-callback-can-be-abused-to-manipulateclaim-other-users-positions-hexens-none-stakewise-markdown
+- using `uint16`: https://solodit.cyfrin.io/issues/h-6-dos-might-happen-to-dinerowithdrawrequestmanager_initiatewithdrawimpl-due-to-overflow-on-s_batchnonce-sherlock-notional-exponent-git
+- using `ECDSA.tryRecover()`: https://certificate.quantstamp.com/full/nayms-2024-retainer/04e1c37c-19e8-4c7d-b743-268e4a6466c9/index.html#findings-qs13
+- empty `catch` block: https://github.com/pashov/audits/blob/master/team/md/RipIt-security-review_2025-05-10.md#m-01-failure-in-sendnfts-leaves-nfts-stuck-and-causes-asset-loss
+- `whenNotPaused` modifier not used: https://github.com/code-423n4/2024-04-renzo-findings/issues/569
+- reentrancy: https://code4rena.com/reports/2024-04-renzo#l-21--bridgeto-function-vulnerable-to-reentrancy-attacks
+- using `address.transfer()` instead of `address.call()`: https://solodit.cyfrin.io/issues/h-01-withdrawals-can-be-locked-forever-if-recipient-is-a-contract-code4rena-renzo-renzo-git
+- reentrancy: https://solodit.cyfrin.io/issues/reentrancy-in-rafflemintv1withdrawnonraffleproceeds-halborn-proof-of-play-proof-of-play-pirate-nation-markdown
+- unsafe cast: https://solodit.cyfrin.io/issues/unsafe-cast-can-allow-users-to-permanently-mint-gold-tokens-halborn-proof-of-play-proof-of-play-pirate-nation-markdown
+- empty `catch` block: https://solodit.cyfrin.io/issues/h-11-if-repayloancallback-address-doesnt-implement-repayloancallback-trycatch-wont-go-into-the-catch-and-will-revert-the-tx-sherlock-teller-finance-git
+- `transferFrom` vs `safeTransferFrom`: https://solodit.cyfrin.io/issues/h-5-anyone-can-steal-pool-shares-from-lender-group-if-no-revert-on-failure-tokens-are-used-sherlock-teller-finance-git
+- (rust) overflow (issue 8.4): https://www.halborn.com/audits/phantasia-sports/ntf-store-solana-program-security-assessment
+- using balance vs reserve in CPP: https://medium.com/certora/exploiting-an-invariant-break-how-we-found-a-pool-draining-bug-in-sushiswaps-trident-585bd98a4d4f
+- compiler bug, memory vs calldata: https://solodit.cyfrin.io/issues/mismatching-data-location-during-inheritance-halborn-damfinance-lmcv-part-3-markdown
+- arbitrary `approve()`: https://x.com/TenArmorAlert/status/1968138774551969874
+- using `isContract` (8.3): https://www.halborn.com/audits/coredao/genesis-smart-contract-security-assessment
+- `msg.value` != deposited amount from input params: https://solodit.cyfrin.io/issues/missing-comparison-between-msg-value-and-amount-leads-to-draining-of-the-funds-halborn-chiliz-bridge-updates-markdown
+- trying to override private variables: https://solodit.cyfrin.io/issues/m-01-synthtoken-returns-incorrect-name-symbol-and-decimals-pashov-audit-group-none-covenant_2025-08-18-markdown
+- creating upgradeable contract without a proxy: https://solodit.cyfrin.io/issues/m-14-incompatibility-of-upgradeability-pattern-in-titlesgraph-contract-sherlock-titles-publishing-protocol-git
+- unsupported interface: https://solodit.cyfrin.io/issues/m-13-editionsupportsinterface-is-not-eip1155-compliant-sherlock-titles-publishing-protocol-git
+- `msg.value` in a loop: https://solodit.cyfrin.io/issues/m-10-broken-batch-minting-feature-sherlock-titles-publishing-protocol-git
+- memory vs storage: https://solodit.cyfrin.io/issues/m-5-titlesgraphacknowledgeedge-methods-do-not-write-acknowledgments-to-storage-sherlock-titles-publishing-protocol-git
+- `CREATE` opcode doesn't work in ZK Sync as expected: https://solodit.cyfrin.io/issues/m-2-create-opcode-works-differently-in-the-zksync-chain-sherlock-titles-publishing-protocol-git
+- incorrect encoding of bytes and strings in EIP712: https://solodit.cyfrin.io/issues/m-1-incorrect-encoding-of-bytes-for-eip712-digest-in-titlegraph-causes-signatures-generated-by-common-eip712-tools-to-be-unusable-sherlock-titles-publishing-protocol-git
+- price oracle manipulation: https://www.quillaudits.com/blog/hack-analysis/flash-loan-attack-on-gold-protocol
+- hardcoded address not compatible with L2 networks: https://solodit.cyfrin.io/issues/m-02-hardcoded-address-restricts-multi-chain-deployments-pashov-audit-group-none-saffron_2025-07-31-markdown
+- `nonreentrant` is not the 1st modifier: https://github.com/solodit/solodit_content/blob/main/reports/Cyfrin/2025-10-16-cyfrin-accountable-v2.0.md#nonreentrant-is-not-the-first-modifier
+- `msg.sender` in `onlyAuth` modifier not used in the method: https://solodit.cyfrin.io/issues/accountableasyncredeemvault-allows-deposits-for-non-whitelisted-or-non-kyced-addresses-cyfrin-none-accountable-markdown
+- no domain separator in signed data: https://solodit.cyfrin.io/issues/signed-swap-digest-lacks-a-domain-separator-spearbit-none-uniswap-foundation-pdf
+- round up in `ERC4626.convertToAssets()` instead of down: https://solodit.cyfrin.io/issues/incorrect-rounding-direction-in-supervaultconverttoassets-spearbit-none-superform-v2-periphery-pdf
+- using `encodePacked`: https://solodit.cyfrin.io/issues/issues-with-create2-salt-in-supervaultaggregatorcreatevault-spearbit-none-superform-v2-periphery-pdf
+- unsafe downcasting: https://solodit.cyfrin.io/issues/m-22-utilization-ratio-overflow-due-to-incorrecte-uint64-cast-sherlock-ammplify-git
+- left shift silent overflow: https://solodit.cyfrin.io/issues/m-18-shift-overflow-in-getequivalentliq-inflates-lp-shares-sherlock-ammplify-git
+- unsafe typecasting: https://solodit.cyfrin.io/issues/m-9-unchecked-underflow-in-treeticklib-causes-transaction-revert-in-route-creation-sherlock-ammplify-git
+- no input params address validation: https://solodit.cyfrin.io/issues/h-13-attackers-can-drain-the-protocol-tokens-sherlock-ammplify-git
+- using Uniswap v3 spot prices: https://solodit.cyfrin.io/issues/h-1-accrued-maker-fees-not-yet-compounded-can-be-stolen-by-manipulating-uniswap-pool-spot-price-to-reduce-fees-equivalent-liquidity-and-liquidity-share-price-on-maker-liquidity-deposit-sherlock-ammplify-git
+- (rust) hardcoded price: https://solodit.cyfrin.io/issues/m-01-initializing-sol-price-makes-trading-unfair-pashov-audit-group-none-pump_2025-03-18-markdown
+- pause/unpause methods not used: https://solodit.cyfrin.io/issues/m-02-pausable-vault-does-not-override-necessary-pause-methods-shieldify-none-colbfinance-vault-markdown
+- incorrect variable assignment order: https://solodit.cyfrin.io/issues/m-01-incorrect-variable-assignment-pashov-audit-group-none-hyperstable_2025-06-03-markdown
+- 63/64 gas attack vector: https://solodit.cyfrin.io/issues/m-01-fulfillers-exploit-eip-150-to-bypass-zkpaycallback-pashov-audit-group-none-sxt_2025-03-31-markdown
+- unsafe typecasting: https://github.com/mixbytes/audits_public/blob/master/Barter%20DAO/Superposition/README.md#1-silent-truncation-in-permit2-transfers
+- callback on `msg.sender`: https://solodit.cyfrin.io/issues/double-order-attack-via-callback-mechanism-mixbytes-none-barter-dao-markdown
+- lack of input validation: https://solodit.cyfrin.io/issues/h-2-caller-supplied-controltower-lets-anyone-be-the-migrator-sherlock-usg-tangent-git
+- nested `nonReentrant` modifiers: https://github.com/mixbytes/audits_public/blob/master/Notional%20Finance/Notional%20v4/README.md#3-nested-nonreentrant-in-allocation-wrappers-causes-revert
+- abracadabra hack: https://www.quillaudits.com/blog/hack-analysis/abracadabra-hack-explained?ck_subscriber_id=3171498808
+- using curve spot price: https://github.com/pashov/audits/blob/master/team/md/StakeDAO-security-review_2025-07-21.md#m-08-oracles-are-vulnerable-to-flash-loan-attack-vectors + https://github.com/pashov/audits/blob/master/team/md/StakeDAO-security-review_2025-07-21.md#l-10-oracle-price-manipulation-causes-incorrect-collateral-and-utilization
+- using curve lp virtual price: https://github.com/pashov/audits/blob/master/team/md/StakeDAO-security-review_2025-07-21.md#l-11-curvestableswaporacleprice-can-overestimate-the-price-of-the-collateral-token
+- reentrancy: https://github.com/pashov/audits/blob/master/team/md/Elytra-security-review_2025-07-10.md#m-06-cross-contract-reentrancy-bug-in-withdrawhype
+- wrong logic for comparing ERC20 balances: https://solodit.cyfrin.io/issues/c-01-receivefromdepositpool-does-not-track-assets-transferred-pashov-audit-group-none-elytra_2025-07-10-markdown
+- signature malleability: https://github.com/pashov/audits/blob/master/team/md/Aria-security-review_2025-05-12.md#l-04-signatures-can-be-reused-as-they-are-vulnerable-to-malleability
+- `AccessManaged` misconfigure: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/0de8004a14d281e1522a12da6b84ea8d389e1631/contracts/access/manager/AccessManaged.sol#L16
+- double division leads to double precision loss: https://github.com/pashov/audits/blob/master/team/md/BOB-Staking-security-review_2025-10-18.md#l-05-multistep-division-leads-to-loss-of-precision
+- `ERC20.safeTransferFrom()` without `msg.sender`: https://solodit.cyfrin.io/issues/h-02-delegating-to-address0-empties-contract-via-altergovernancedelegatee-pashov-audit-group-none-bob-staking_2025-10-18-markdown
+- returning array from solidity generated getter: https://code4rena.com/reports/2025-10-hybra-finance#m-07-claiming-rewards-in-governancehybr-will-always-revert
+- `require` statement that is always true: https://code4rena.com/reports/2025-10-hybra-finance#nc-01-incorrect-require-statement-in-setinternalbribe
+- division before multiplication: https://solodit.cyfrin.io/issues/divide-before-multiply-loses-precision-in-fivefiftyrule_updateentityallowance-and-leads-to-caps-being-exceeded-cyfrin-none-remora-dynamic-tokens-markdown
+- signature replay: https://solodit.cyfrin.io/issues/signatures-on-tokenbank-and-allowlist-can-be-reused-in-perpetuity-an-infinite-amount-of-times-cyfrin-none-remora-dynamic-tokens-markdown
+- reentrancy: https://solodit.cyfrin.io/issues/re-entrancy-when-minting-lp-tokens-can-lead-to-stealing-vault-funds-halborn-bracketfi-passage-markdown
+- OZ vulnerable ECDSA dependency: https://solodit.cyfrin.io/issues/vulnerable-ecdsa-library-halborn-biconomy-smart-wallet-contracts-v2-markdown
+- reentrancy: https://solodit.cyfrin.io/issues/reentrancy-leads-drain-of-funds-privileged-user-halborn-biconomy-hyphen-v2-markdown
+- revert underflow: https://solodit.cyfrin.io/issues/wrong-fee-calculation-leads-loss-of-reward-funds-halborn-biconomy-hyphen-v2-markdown
+- `safeTransferFrom(sender)`: https://solodit.cyfrin.io/issues/inadequate-access-control-in-addgasfee-function-allows-to-steal-users-tokens-halborn-biconomy-cross-chain-messaging-protocol-markdown
+- reentrancy: https://solodit.cyfrin.io/issues/h-01-malicious-user-can-mint-unlimited-amount-of-nfts-due-to-reentrancy-in-whitelistmint-and-fcfsmint-shieldify-none-vallarok-markdown
+- using uniswap v2 spot price: https://audits.sherlock.xyz/contests/280/report (issue 10)
+- lack of input address validation: https://solodit.cyfrin.io/issues/c-01-withdrawing-collateral-and-fees-and-bypassing-trust-safety-mechanism-pashov-audit-group-none-catalyst-april-markdown
+- using `balanceOf(address(this))`: https://solodit.cyfrin.io/issues/attacker-can-stall-undelegations-openzeppelin-none-forta-staking-vault-audit-markdown
+- (rust) lack of `sysvar` validation: https://solodit.cyfrin.io/issues/lack-of-instruction-sysvar-validation-ottersec-none-composablefi-pdf
+- (rust) lack of input validation: https://solodit.cyfrin.io/issues/discrepancies-in-deposit-functionality-ottersec-none-composablefi-pdf
+- (rust) `init_if_needed` reinitialisation: https://solodit.cyfrin.io/issues/ability-to-initialize-multiple-times-ottersec-none-composablefi-pdf
+- using `balanceOf(address(this))`: https://solodit.cyfrin.io/issues/inflation-of-pool-balances-ottersec-none-stargate-v2-pdf
+- broken access control logic: https://solodit.cyfrin.io/issues/unrestricted-call-to-setconfig-zokyo-none-zap-markdown
+- reentrancy: https://solodit.cyfrin.io/issues/reentrance-can-lead-to-loss-of-funds-zokyo-none-zap-markdown
+- unsafe casting: https://github.com/solodit/solodit_content/blob/main/reports/Cyfrin/2024-04-11-cyfrin-wormhole-evm-ntt-v2.md#silent-overflow-in-trimmedamountshift-could-result-in-rate-limiter-being-bypassed
+- missing `unpause()` method: https://github.com/solodit/solodit_content/blob/main/reports/Cyfrin/2024-04-11-cyfrin-wormhole-evm-ntt-v2.md#ntt-manager-cannot-be-unpaused-once-paused
+- unprotected flashloan callback: https://solodit.cyfrin.io/issues/stake-6-unprotected-flash-loan-callback-can-be-abused-to-manipulateclaim-other-users-positions-hexens-none-stakewise-markdown
+- sandwiching: https://x.com/0xkaden/status/1856784539978444827
+- ERC2271 + Multicall: https://blog.thirdweb.com/vulnerability-report/
+- Uniswap v3 using spot price: https://solodit.cyfrin.io/issues/h-1-attacker-can-profit-by-manipulating-uniswap-liquidity-sherlock-steth-by-easedefi-git
 
