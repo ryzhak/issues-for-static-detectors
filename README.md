@@ -2,17 +2,16 @@
 Curated list of smart contract bugs which could be caught by static analyzers
 
 ## Issues
-### Confidence HIGH
+### Category
 #### erc20-self-transfer
 - self ERC20 transfer: https://www.quillaudits.com/blog/hack-analysis/labubu-token-exploit-transfer-logic-flaw
 - transfer to self: https://x.com/bantg/status/1888231508294451525?utm_source=substack&utm_medium=email
-#### ecdsa-zero-address-not-checked-on-invalid-signature
+#### cryptography
 - `ECDSA.recover()` doesn't check for address(0): https://solodit.cyfrin.io/issues/h-10-_validatesignature-does-not-properly-handle-address0-pashov-audit-group-none-omo_2025-01-25-markdown
 - unexpected 0 address on ECDSA recover: https://kadenzipfel.github.io/smart-contract-vulnerabilities/vulnerabilities/unexpected-ecrecover-null-address.html
 - invalid signature allowed: https://solodit.cyfrin.io/issues/zero-address-rfqordersigner-allows-unrestricted-order-execution-mixbytes-none-xpress-markdown
-#### ecdsa-backdoor
 - backdoor ECDSA lib: https://twitter.com/realScamSniffer/status/1838884343563067864?utm_source=substack&utm_medium=email
-### Confidence UNKNOWN
+### Unsorted
 - arbitrary `msg.sender` interface: https://solodit.cyfrin.io/issues/h-13-infernalriftbelowclaimroyalties-no-verification-msgsender-sherlock-flayer-git
 - arbitrary contract may be used for `Ownable(msg.sender).owner()`: https://solodit.cyfrin.io/issues/c-01-adversary-can-lock-tokens-forever-for-any-honeylocker-pashov-audit-group-none-interpol-markdown
 - `require()` bypass by arbitrary input address: https://solodit.cyfrin.io/issues/h-04-access-restrictions-on-compoundtonotionalv2notionalcallback-can-be-bypassed-code4rena-notional-notional-git
