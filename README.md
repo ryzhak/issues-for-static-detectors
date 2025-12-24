@@ -34,7 +34,6 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - signature replay, `nonce` is not used in a struct used in `MerkleProofLib.verify()`: https://solodit.cyfrin.io/issues/c-07-in-resourcelockvalidator-the-validateuserop-function-is-not-consuming-the-signature-proof-shieldify-none-etherspot-credibleaccountmodule-markdown
 - lack of signer validation, recovered address is not checked with the signer's address: https://solodit.cyfrin.io/issues/h-01-session-key-can-be-consumed-by-unauthorized-scw-shieldify-none-etherspot-credibleaccountmodule-mitigation-markdown
 - passing EIP721 domain separator in function params: https://solodit.cyfrin.io/issues/h-01-cross-chain-signature-replay-attack-due-to-user-supplied-domainseparator-and-missing-deadline-check-code4rena-next-generation-next-generation-git
-- broken access for `updateMerkleRoot()`: https://blog.solidityscan.com/superrare-hack-analysis-488d544d89e0
 - ECDSA signature malleability: https://certificate.quantstamp.com/full/primex-finance/179ad629-f166-493b-ad06-16ebf80054af/index.html#findings-qs14
 - using `signatures.length` instead of `signers.length`: https://solodit.cyfrin.io/issues/h-1-consensuschecksignatures-doesnt-check-duplication-of-signers-sherlock-mellow-flexible-vaults-git
 - signature replay: https://solodit.cyfrin.io/issues/signature-replay-attack-possible-between-stake-unstake-and-reward-functions-enabling-unauthorized-token-claims-quantstamp-sapien-markdown
@@ -46,6 +45,7 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - signature replay: https://solodit.cyfrin.io/issues/signatures-on-tokenbank-and-allowlist-can-be-reused-in-perpetuity-an-infinite-amount-of-times-cyfrin-none-remora-dynamic-tokens-markdown
 - OZ vulnerable ECDSA dependency: https://solodit.cyfrin.io/issues/vulnerable-ecdsa-library-halborn-biconomy-smart-wallet-contracts-v2-markdown
 ### Unsorted
+- broken access for `updateMerkleRoot()`: https://blog.solidityscan.com/superrare-hack-analysis-488d544d89e0
 - arbitrary `msg.sender` interface: https://solodit.cyfrin.io/issues/h-13-infernalriftbelowclaimroyalties-no-verification-msgsender-sherlock-flayer-git
 - arbitrary contract may be used for `Ownable(msg.sender).owner()`: https://solodit.cyfrin.io/issues/c-01-adversary-can-lock-tokens-forever-for-any-honeylocker-pashov-audit-group-none-interpol-markdown
 - `require()` bypass by arbitrary input address: https://solodit.cyfrin.io/issues/h-04-access-restrictions-on-compoundtonotionalv2notionalcallback-can-be-bypassed-code4rena-notional-notional-git
