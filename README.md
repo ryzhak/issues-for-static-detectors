@@ -19,8 +19,8 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - signature replay: https://solodit.cyfrin.io/issues/h-01-cross-chain-signature-replay-attack-due-to-user-supplied-domainseparator-and-missing-deadline-check-code4rena-next-generation-next-generation-git
 - signature replay: https://solodit.cyfrin.io/issues/signature-replay-attack-possible-between-stake-unstake-and-reward-functions-enabling-unauthorized-token-claims-quantstamp-sapien-markdown
 - signature replay: https://solodit.cyfrin.io/issues/signatures-on-tokenbank-and-allowlist-can-be-reused-in-perpetuity-an-infinite-amount-of-times-cyfrin-none-remora-dynamic-tokens-markdown
-###### insecure-randomness
 - generating random number from `block.number`: https://solodit.cyfrin.io/issues/h-7-stoplimit-id-collision-with-bracket-orders-due-to-no-validation-opening-up-an-attack-to-steal-funds-sherlock-okus-new-order-types-contract-contest-git
+###### insecure-randomness
 - `random` in function name, there's nothing (almost) random in blockchain: https://solodit.cyfrin.io/issues/drawrandomnumber-call-can-be-abused-to-alter-the-lottery-results-halborn-winwin-winwin-protocol-markdown
 - predictable randomness: https://solodit.cyfrin.io/issues/h-01-predictable-randomness-in-activity-outcomes-shieldify-none-penguingotchi-markdown
 ###### frontrunning
