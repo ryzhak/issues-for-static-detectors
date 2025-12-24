@@ -7,43 +7,58 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - self ERC20 transfer: https://www.quillaudits.com/blog/hack-analysis/labubu-token-exploit-transfer-logic-flaw
 - transfer to self: https://x.com/bantg/status/1888231508294451525?utm_source=substack&utm_medium=email
 #### cryptography
+##### Must have
+###### unchecked-zero-address
 - `ECDSA.recover()` doesn't check for address(0): https://solodit.cyfrin.io/issues/h-10-_validatesignature-does-not-properly-handle-address0-pashov-audit-group-none-omo_2025-01-25-markdown
 - unexpected 0 address on ECDSA recover: https://kadenzipfel.github.io/smart-contract-vulnerabilities/vulnerabilities/unexpected-ecrecover-null-address.html
-- backdoor ECDSA lib: https://twitter.com/realScamSniffer/status/1838884343563067864?utm_source=substack&utm_medium=email
-- using `block.number` for nonce in permit2: https://solodit.cyfrin.io/issues/h-05-using-the-same-block-number-as-nonce-for-permit2-order-pashov-audit-group-none-bunni-august-markdown
-- incorrect `verifyingContract` address in ERC-7739: https://solodit.cyfrin.io/issues/erc-7739-does-not-use-correct-verifyingcontract-address-cantina-none-biconomy-pdf
+- using `ECDSA.tryRecover()` without error check: https://certificate.quantstamp.com/full/nayms-2024-retainer/04e1c37c-19e8-4c7d-b743-268e4a6466c9/index.html#findings-qs13 + https://github.com/nayms/contracts-v3/blob/2f08d243291d3d6891a08b07807066bdb0d2445c/src/libs/LibEntity.sol#L229
+###### signature-replay
 - replayable signature: https://solodit.cyfrin.io/issues/h-01-signatures-can-be-replayed-using-different-addresses-pashov-audit-group-none-sofamon-august-markdown
-- generating random number from `block.number`: https://solodit.cyfrin.io/issues/h-7-stoplimit-id-collision-with-bracket-orders-due-to-no-validation-opening-up-an-attack-to-steal-funds-sherlock-okus-new-order-types-contract-contest-git
 - signature replay: https://solodit.cyfrin.io/issues/h-01-cross-chain-replay-in-borrowasset-swaptoborrow-kann-audits-none-rwa-markdown
-- commit-reveal frontrunning: https://github.com/ConsenSys/ens-audit-report-2019-02?tab=readme-ov-file#33-ethregistrarcontrollerregister-is-vulnerable-to-front-running
-- `ERC20.permit()` frontrun: https://solodit.cyfrin.io/issues/h-05-the-implementation-of-pulltokenswithpermit-poses-a-risk-allowing-malicious-actors-to-steal-tokens-code4rena-bakerfi-bakerfi-git
 - signature replay: https://solodit.cyfrin.io/issues/cross-organization-signature-replay-halborn-story-proof-of-creativity-protocol-periphery-contracts-markdown
-- frontrunning permit2 inside a function: https://www.trust-security.xyz/post/permission-denied
-- not all struct fields are used for signature validation: https://solodit.cyfrin.io/issues/incomplete-payload-validation-in-whitelist-register-halborn-beranames-name-service-bns-contracts-v2-markdown
-- signature replay, `nonce` not part of the signature verification: https://solodit.cyfrin.io/issues/signature-does-not-take-all-parameters-into-account-and-can-be-reused-halborn-rfx-exchange-common-pool-markdown
-- `random` in function name, there's nothing (almost) random in blockchain: https://solodit.cyfrin.io/issues/drawrandomnumber-call-can-be-abused-to-alter-the-lottery-results-halborn-winwin-winwin-protocol-markdown
-- signature replay: https://solodit.cyfrin.io/issues/gatewayupdatekeys-signatures-can-be-replayed-halborn-analog-labs-gateway-markdown
-- hash collision: https://solodit.cyfrin.io/issues/hash-collision-in-the-mimc-library-fixed-consensys-none-linea-ens-markdown
 - signature replay: https://solodit.cyfrin.io/issues/h-01-cross-chain-signature-replay-attack-due-to-user-supplied-domainseparator-and-missing-deadline-check-code4rena-next-generation-next-generation-git
-- bypassing merkle proof validation: https://github.com/advisories/GHSA-wprv-93r4-jj2p
+- signature replay: https://solodit.cyfrin.io/issues/signature-replay-attack-possible-between-stake-unstake-and-reward-functions-enabling-unauthorized-token-claims-quantstamp-sapien-markdown
+- signature replay: https://solodit.cyfrin.io/issues/signatures-on-tokenbank-and-allowlist-can-be-reused-in-perpetuity-an-infinite-amount-of-times-cyfrin-none-remora-dynamic-tokens-markdown
+###### insecure-randomness
+- generating random number from `block.number`: https://solodit.cyfrin.io/issues/h-7-stoplimit-id-collision-with-bracket-orders-due-to-no-validation-opening-up-an-attack-to-steal-funds-sherlock-okus-new-order-types-contract-contest-git
+- `random` in function name, there's nothing (almost) random in blockchain: https://solodit.cyfrin.io/issues/drawrandomnumber-call-can-be-abused-to-alter-the-lottery-results-halborn-winwin-winwin-protocol-markdown
+- predictable randomness: https://solodit.cyfrin.io/issues/h-01-predictable-randomness-in-activity-outcomes-shieldify-none-penguingotchi-markdown
+###### frontrunning
+- commit-reveal frontrunning: https://github.com/ConsenSys/ens-audit-report-2019-02?tab=readme-ov-file#33-ethregistrarcontrollerregister-is-vulnerable-to-front-running
+- frontrunning permit2 inside a function: https://www.trust-security.xyz/post/permission-denied
+###### business-logic
+- using `signatures.length` instead of `signers.length`: https://solodit.cyfrin.io/issues/h-1-consensuschecksignatures-doesnt-check-duplication-of-signers-sherlock-mellow-flexible-vaults-git
+##### Should have
+###### backdoor-ecdsa
+- backdoor ECDSA lib: https://twitter.com/realScamSniffer/status/1838884343563067864?utm_source=substack&utm_medium=email
+###### erc-7739
+- incorrect `verifyingContract` address in ERC-7739: https://solodit.cyfrin.io/issues/erc-7739-does-not-use-correct-verifyingcontract-address-cantina-none-biconomy-pdf
+###### frontrunning
+- `ERC20.permit()` frontrun: https://solodit.cyfrin.io/issues/h-05-the-implementation-of-pulltokenswithpermit-poses-a-risk-allowing-malicious-actors-to-steal-tokens-code4rena-bakerfi-bakerfi-git
+- not all struct fields are used for signature validation: https://solodit.cyfrin.io/issues/incomplete-payload-validation-in-whitelist-register-halborn-beranames-name-service-bns-contracts-v2-markdown
+- `userOp` not part of signature: https://solodit.cyfrin.io/issues/c-08-in-resourcelockvalidator-the-validateuserop-function-lacks-sufficient-checks-allowing-draining-of-modularetherspotwallet-balances-shieldify-none-etherspot-credibleaccountmodule-markdown
+- lack of signer validation, recovered address is not checked with the signer's address: https://solodit.cyfrin.io/issues/h-01-session-key-can-be-consumed-by-unauthorized-scw-shieldify-none-etherspot-credibleaccountmodule-mitigation-markdown
+- using `encodePacked`: https://solodit.cyfrin.io/issues/issues-with-create2-salt-in-supervaultaggregatorcreatevault-spearbit-none-superform-v2-periphery-pdf
+###### signature-replay
+- signature replay, `nonce` not part of the signature verification: https://solodit.cyfrin.io/issues/signature-does-not-take-all-parameters-into-account-and-can-be-reused-halborn-rfx-exchange-common-pool-markdown
+- signature replay: https://solodit.cyfrin.io/issues/gatewayupdatekeys-signatures-can-be-replayed-halborn-analog-labs-gateway-markdown
 - signature replay attack: https://www.quillaudits.com/blog/hack-analysis/dexodus-finance-exploit
 - flawed signature verification: https://samczsun.com/the-0x-vulnerability-explained/
-- predictable randomness: https://solodit.cyfrin.io/issues/h-01-predictable-randomness-in-activity-outcomes-shieldify-none-penguingotchi-markdown
-- Uniswap v4 insufficient validation (of signature?): https://solodit.cyfrin.io/issues/rebalance-mechanism-access-control-can-be-bypassed-trailofbits-none-bunni-v2-pdf
-- `userOp` not part of signature: https://solodit.cyfrin.io/issues/c-08-in-resourcelockvalidator-the-validateuserop-function-lacks-sufficient-checks-allowing-draining-of-modularetherspotwallet-balances-shieldify-none-etherspot-credibleaccountmodule-markdown
 - signature replay, `nonce` is not used in a struct used in `MerkleProofLib.verify()`: https://solodit.cyfrin.io/issues/c-07-in-resourcelockvalidator-the-validateuserop-function-is-not-consuming-the-signature-proof-shieldify-none-etherspot-credibleaccountmodule-markdown
-- lack of signer validation, recovered address is not checked with the signer's address: https://solodit.cyfrin.io/issues/h-01-session-key-can-be-consumed-by-unauthorized-scw-shieldify-none-etherspot-credibleaccountmodule-mitigation-markdown
-- passing EIP721 domain separator in function params: https://solodit.cyfrin.io/issues/h-01-cross-chain-signature-replay-attack-due-to-user-supplied-domainseparator-and-missing-deadline-check-code4rena-next-generation-next-generation-git
-- ECDSA signature malleability: https://certificate.quantstamp.com/full/primex-finance/179ad629-f166-493b-ad06-16ebf80054af/index.html#findings-qs14
-- using `signatures.length` instead of `signers.length`: https://solodit.cyfrin.io/issues/h-1-consensuschecksignatures-doesnt-check-duplication-of-signers-sherlock-mellow-flexible-vaults-git
-- signature replay: https://solodit.cyfrin.io/issues/signature-replay-attack-possible-between-stake-unstake-and-reward-functions-enabling-unauthorized-token-claims-quantstamp-sapien-markdown
-- using `ECDSA.tryRecover()`: https://certificate.quantstamp.com/full/nayms-2024-retainer/04e1c37c-19e8-4c7d-b743-268e4a6466c9/index.html#findings-qs13
-- incorrect encoding of bytes and strings in EIP712: https://solodit.cyfrin.io/issues/m-1-incorrect-encoding-of-bytes-for-eip712-digest-in-titlegraph-causes-signatures-generated-by-common-eip712-tools-to-be-unusable-sherlock-titles-publishing-protocol-git
 - no domain separator in signed data: https://solodit.cyfrin.io/issues/signed-swap-digest-lacks-a-domain-separator-spearbit-none-uniswap-foundation-pdf
-- using `encodePacked`: https://solodit.cyfrin.io/issues/issues-with-create2-salt-in-supervaultaggregatorcreatevault-spearbit-none-superform-v2-periphery-pdf
-- signature malleability: https://github.com/pashov/audits/blob/master/team/md/Aria-security-review_2025-05-12.md#l-04-signatures-can-be-reused-as-they-are-vulnerable-to-malleability
-- signature replay: https://solodit.cyfrin.io/issues/signatures-on-tokenbank-and-allowlist-can-be-reused-in-perpetuity-an-infinite-amount-of-times-cyfrin-none-remora-dynamic-tokens-markdown
+###### hash-collision
+- hash collision: https://solodit.cyfrin.io/issues/hash-collision-in-the-mimc-library-fixed-consensys-none-linea-ens-markdown
+###### insecure-dependencies
+- bypassing merkle proof validation: https://github.com/advisories/GHSA-wprv-93r4-jj2p
+- ECDSA signature malleability: https://certificate.quantstamp.com/full/primex-finance/179ad629-f166-493b-ad06-16ebf80054af/index.html#findings-qs14
 - OZ vulnerable ECDSA dependency: https://solodit.cyfrin.io/issues/vulnerable-ecdsa-library-halborn-biconomy-smart-wallet-contracts-v2-markdown
+###### signature-malleability
+- signature malleability: https://github.com/pashov/audits/blob/master/team/md/Aria-security-review_2025-05-12.md#l-04-signatures-can-be-reused-as-they-are-vulnerable-to-malleability
+###### uncategorized
+- Uniswap v4 insufficient validation (of signature?): https://solodit.cyfrin.io/issues/rebalance-mechanism-access-control-can-be-bypassed-trailofbits-none-bunni-v2-pdf
+- incorrect encoding of bytes and strings in EIP712: https://solodit.cyfrin.io/issues/m-1-incorrect-encoding-of-bytes-for-eip712-digest-in-titlegraph-causes-signatures-generated-by-common-eip712-tools-to-be-unusable-sherlock-titles-publishing-protocol-git
+- using `block.number` for nonce in permit2: https://solodit.cyfrin.io/issues/h-05-using-the-same-block-number-as-nonce-for-permit2-order-pashov-audit-group-none-bunni-august-markdown
+
 ### Unsorted
 - broken access for `updateMerkleRoot()`: https://blog.solidityscan.com/superrare-hack-analysis-488d544d89e0
 - arbitrary `msg.sender` interface: https://solodit.cyfrin.io/issues/h-13-infernalriftbelowclaimroyalties-no-verification-msgsender-sherlock-flayer-git
