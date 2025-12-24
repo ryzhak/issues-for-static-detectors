@@ -26,7 +26,7 @@ Curated list of smart contract bugs which could be caught by static analyzers
 ###### frontrunning
 - commit-reveal frontrunning: https://github.com/ConsenSys/ens-audit-report-2019-02?tab=readme-ov-file#33-ethregistrarcontrollerregister-is-vulnerable-to-front-running
 - frontrunning permit2 inside a function: https://www.trust-security.xyz/post/permission-denied
-###### business-logic
+###### signatures-array-length
 - using `signatures.length` instead of `signers.length`: https://solodit.cyfrin.io/issues/h-1-consensuschecksignatures-doesnt-check-duplication-of-signers-sherlock-mellow-flexible-vaults-git
 ##### Should have
 ###### backdoor-ecdsa
