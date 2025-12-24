@@ -20,12 +20,12 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - signature replay: https://solodit.cyfrin.io/issues/signature-replay-attack-possible-between-stake-unstake-and-reward-functions-enabling-unauthorized-token-claims-quantstamp-sapien-markdown
 - signature replay: https://solodit.cyfrin.io/issues/signatures-on-tokenbank-and-allowlist-can-be-reused-in-perpetuity-an-infinite-amount-of-times-cyfrin-none-remora-dynamic-tokens-markdown
 - generating random number from `block.number`: https://solodit.cyfrin.io/issues/h-7-stoplimit-id-collision-with-bracket-orders-due-to-no-validation-opening-up-an-attack-to-steal-funds-sherlock-okus-new-order-types-contract-contest-git
-###### insecure-randomness
-- `random` in function name, there's nothing (almost) random in blockchain: https://solodit.cyfrin.io/issues/drawrandomnumber-call-can-be-abused-to-alter-the-lottery-results-halborn-winwin-winwin-protocol-markdown
-- predictable randomness: https://solodit.cyfrin.io/issues/h-01-predictable-randomness-in-activity-outcomes-shieldify-none-penguingotchi-markdown
 ###### frontrunning
 - commit-reveal frontrunning: https://github.com/ConsenSys/ens-audit-report-2019-02?tab=readme-ov-file#33-ethregistrarcontrollerregister-is-vulnerable-to-front-running
 - frontrunning permit2 inside a function: https://www.trust-security.xyz/post/permission-denied
+###### insecure-randomness
+- `random` in function name, there's nothing (almost) random in blockchain: https://solodit.cyfrin.io/issues/drawrandomnumber-call-can-be-abused-to-alter-the-lottery-results-halborn-winwin-winwin-protocol-markdown
+- predictable randomness: https://solodit.cyfrin.io/issues/h-01-predictable-randomness-in-activity-outcomes-shieldify-none-penguingotchi-markdown
 ###### signatures-array-length
 - using `signatures.length` instead of `signers.length`: https://solodit.cyfrin.io/issues/h-1-consensuschecksignatures-doesnt-check-duplication-of-signers-sherlock-mellow-flexible-vaults-git
 ##### Should have
