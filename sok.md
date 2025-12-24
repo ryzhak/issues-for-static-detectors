@@ -28,6 +28,7 @@
 - https://dacian.me/signature-replay-attacks
 - https://github.com/coinspect/learn-evm-attacks
 - https://github.com/0xNazgul/Blockchain-Security-Library
+- https://github.com/AmazingAng/WTF-Solidity/tree/main
 
 ## rust
 - https://github.com/slowmist/solana-smart-contract-security-best-practices?utm_source=substack&utm_medium=email
