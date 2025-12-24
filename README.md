@@ -9,7 +9,6 @@ Curated list of smart contract bugs which could be caught by static analyzers
 #### cryptography
 - `ECDSA.recover()` doesn't check for address(0): https://solodit.cyfrin.io/issues/h-10-_validatesignature-does-not-properly-handle-address0-pashov-audit-group-none-omo_2025-01-25-markdown
 - unexpected 0 address on ECDSA recover: https://kadenzipfel.github.io/smart-contract-vulnerabilities/vulnerabilities/unexpected-ecrecover-null-address.html
-- invalid signature allowed: https://solodit.cyfrin.io/issues/zero-address-rfqordersigner-allows-unrestricted-order-execution-mixbytes-none-xpress-markdown
 - backdoor ECDSA lib: https://twitter.com/realScamSniffer/status/1838884343563067864?utm_source=substack&utm_medium=email
 - using `block.number` for nonce in permit2: https://solodit.cyfrin.io/issues/h-05-using-the-same-block-number-as-nonce-for-permit2-order-pashov-audit-group-none-bunni-august-markdown
 - incorrect `verifyingContract` address in ERC-7739: https://solodit.cyfrin.io/issues/erc-7739-does-not-use-correct-verifyingcontract-address-cantina-none-biconomy-pdf
