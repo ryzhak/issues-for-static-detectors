@@ -35,6 +35,7 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - using `encodePacked`: https://solodit.cyfrin.io/issues/issues-with-create2-salt-in-supervaultaggregatorcreatevault-spearbit-none-superform-v2-periphery-pdf
 - commit-reveal frontrunning: https://github.com/ConsenSys/ens-audit-report-2019-02?tab=readme-ov-file#33-ethregistrarcontrollerregister-is-vulnerable-to-front-running
 - frontrunning permit2 inside a function: https://www.trust-security.xyz/post/permission-denied
+- https://solodit.cyfrin.io/issues/h-12-addnewtranche-no-authorization-from-borrower-code4rena-gondi-gondi-git
 ###### signature-replay
 - signature replay, `nonce` not part of the signature verification: https://solodit.cyfrin.io/issues/signature-does-not-take-all-parameters-into-account-and-can-be-reused-halborn-rfx-exchange-common-pool-markdown
 - signature replay: https://solodit.cyfrin.io/issues/gatewayupdatekeys-signatures-can-be-replayed-halborn-analog-labs-gateway-markdown
