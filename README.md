@@ -13,14 +13,14 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - unexpected 0 address on ECDSA recover: https://kadenzipfel.github.io/smart-contract-vulnerabilities/vulnerabilities/unexpected-ecrecover-null-address.html
 - using `ECDSA.tryRecover()` without error check: https://certificate.quantstamp.com/full/nayms-2024-retainer/04e1c37c-19e8-4c7d-b743-268e4a6466c9/index.html#findings-qs13 + https://github.com/nayms/contracts-v3/blob/2f08d243291d3d6891a08b07807066bdb0d2445c/src/libs/LibEntity.sol#L229
 ###### signature-replay
-- replayable signature: https://solodit.cyfrin.io/issues/h-01-signatures-can-be-replayed-using-different-addresses-pashov-audit-group-none-sofamon-august-markdown
 - signature replay: https://solodit.cyfrin.io/issues/h-01-cross-chain-replay-in-borrowasset-swaptoborrow-kann-audits-none-rwa-markdown
 - signature replay: https://solodit.cyfrin.io/issues/cross-organization-signature-replay-halborn-story-proof-of-creativity-protocol-periphery-contracts-markdown
 - signature replay: https://solodit.cyfrin.io/issues/h-01-cross-chain-signature-replay-attack-due-to-user-supplied-domainseparator-and-missing-deadline-check-code4rena-next-generation-next-generation-git
 - signature replay: https://solodit.cyfrin.io/issues/signature-replay-attack-possible-between-stake-unstake-and-reward-functions-enabling-unauthorized-token-claims-quantstamp-sapien-markdown
 - signature replay: https://solodit.cyfrin.io/issues/signatures-on-tokenbank-and-allowlist-can-be-reused-in-perpetuity-an-infinite-amount-of-times-cyfrin-none-remora-dynamic-tokens-markdown
 - generating random number from `block.number`: https://solodit.cyfrin.io/issues/h-7-stoplimit-id-collision-with-bracket-orders-due-to-no-validation-opening-up-an-attack-to-steal-funds-sherlock-okus-new-order-types-contract-contest-git
-###### frontrunning
+###### signature-frontrunning
+- replayable signature: https://solodit.cyfrin.io/issues/h-01-signatures-can-be-replayed-using-different-addresses-pashov-audit-group-none-sofamon-august-markdown
 - commit-reveal frontrunning: https://github.com/ConsenSys/ens-audit-report-2019-02?tab=readme-ov-file#33-ethregistrarcontrollerregister-is-vulnerable-to-front-running
 - frontrunning permit2 inside a function: https://www.trust-security.xyz/post/permission-denied
 ###### insecure-randomness
