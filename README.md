@@ -21,8 +21,6 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - generating random number from `block.number`: https://solodit.cyfrin.io/issues/h-7-stoplimit-id-collision-with-bracket-orders-due-to-no-validation-opening-up-an-attack-to-steal-funds-sherlock-okus-new-order-types-contract-contest-git
 ###### signature-frontrunning
 - replayable signature: https://solodit.cyfrin.io/issues/h-01-signatures-can-be-replayed-using-different-addresses-pashov-audit-group-none-sofamon-august-markdown
-- commit-reveal frontrunning: https://github.com/ConsenSys/ens-audit-report-2019-02?tab=readme-ov-file#33-ethregistrarcontrollerregister-is-vulnerable-to-front-running
-- frontrunning permit2 inside a function: https://www.trust-security.xyz/post/permission-denied
 ###### insecure-randomness
 - `random` in function name, there's nothing (almost) random in blockchain: https://solodit.cyfrin.io/issues/drawrandomnumber-call-can-be-abused-to-alter-the-lottery-results-halborn-winwin-winwin-protocol-markdown
 - predictable randomness: https://solodit.cyfrin.io/issues/h-01-predictable-randomness-in-activity-outcomes-shieldify-none-penguingotchi-markdown
@@ -39,6 +37,8 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - `userOp` not part of signature: https://solodit.cyfrin.io/issues/c-08-in-resourcelockvalidator-the-validateuserop-function-lacks-sufficient-checks-allowing-draining-of-modularetherspotwallet-balances-shieldify-none-etherspot-credibleaccountmodule-markdown
 - lack of signer validation, recovered address is not checked with the signer's address: https://solodit.cyfrin.io/issues/h-01-session-key-can-be-consumed-by-unauthorized-scw-shieldify-none-etherspot-credibleaccountmodule-mitigation-markdown
 - using `encodePacked`: https://solodit.cyfrin.io/issues/issues-with-create2-salt-in-supervaultaggregatorcreatevault-spearbit-none-superform-v2-periphery-pdf
+- commit-reveal frontrunning: https://github.com/ConsenSys/ens-audit-report-2019-02?tab=readme-ov-file#33-ethregistrarcontrollerregister-is-vulnerable-to-front-running
+- frontrunning permit2 inside a function: https://www.trust-security.xyz/post/permission-denied
 ###### signature-replay
 - signature replay, `nonce` not part of the signature verification: https://solodit.cyfrin.io/issues/signature-does-not-take-all-parameters-into-account-and-can-be-reused-halborn-rfx-exchange-common-pool-markdown
 - signature replay: https://solodit.cyfrin.io/issues/gatewayupdatekeys-signatures-can-be-replayed-halborn-analog-labs-gateway-markdown
