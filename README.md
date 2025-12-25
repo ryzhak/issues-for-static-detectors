@@ -13,8 +13,6 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - unexpected 0 address on ECDSA recover: https://kadenzipfel.github.io/smart-contract-vulnerabilities/vulnerabilities/unexpected-ecrecover-null-address.html
 - using `ECDSA.tryRecover()` without error check: https://certificate.quantstamp.com/full/nayms-2024-retainer/04e1c37c-19e8-4c7d-b743-268e4a6466c9/index.html#findings-qs13 + https://github.com/nayms/contracts-v3/blob/2f08d243291d3d6891a08b07807066bdb0d2445c/src/libs/LibEntity.sol#L229
 ###### signature-replay
-- signature replay: https://solodit.cyfrin.io/issues/h-01-cross-chain-replay-in-borrowasset-swaptoborrow-kann-audits-none-rwa-markdown
-- signature replay: https://solodit.cyfrin.io/issues/cross-organization-signature-replay-halborn-story-proof-of-creativity-protocol-periphery-contracts-markdown
 - signature replay: https://solodit.cyfrin.io/issues/h-01-cross-chain-signature-replay-attack-due-to-user-supplied-domainseparator-and-missing-deadline-check-code4rena-next-generation-next-generation-git
 - signature replay: https://solodit.cyfrin.io/issues/signature-replay-attack-possible-between-stake-unstake-and-reward-functions-enabling-unauthorized-token-claims-quantstamp-sapien-markdown
 - signature replay: https://solodit.cyfrin.io/issues/signatures-on-tokenbank-and-allowlist-can-be-reused-in-perpetuity-an-infinite-amount-of-times-cyfrin-none-remora-dynamic-tokens-markdown
@@ -46,6 +44,8 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - flawed signature verification: https://samczsun.com/the-0x-vulnerability-explained/
 - signature replay, `nonce` is not used in a struct used in `MerkleProofLib.verify()`: https://solodit.cyfrin.io/issues/c-07-in-resourcelockvalidator-the-validateuserop-function-is-not-consuming-the-signature-proof-shieldify-none-etherspot-credibleaccountmodule-markdown
 - no domain separator in signed data: https://solodit.cyfrin.io/issues/signed-swap-digest-lacks-a-domain-separator-spearbit-none-uniswap-foundation-pdf
+- signature replay: https://solodit.cyfrin.io/issues/h-01-cross-chain-replay-in-borrowasset-swaptoborrow-kann-audits-none-rwa-markdown
+- signature replay: https://solodit.cyfrin.io/issues/cross-organization-signature-replay-halborn-story-proof-of-creativity-protocol-periphery-contracts-markdown
 ###### hash-collision
 - hash collision: https://solodit.cyfrin.io/issues/hash-collision-in-the-mimc-library-fixed-consensys-none-linea-ens-markdown
 ###### insecure-dependencies
