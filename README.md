@@ -47,6 +47,7 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - signature replay: https://solodit.cyfrin.io/issues/signature-replay-attack-possible-between-stake-unstake-and-reward-functions-enabling-unauthorized-token-claims-quantstamp-sapien-markdown
 - generating random number from `block.number`: https://solodit.cyfrin.io/issues/h-7-stoplimit-id-collision-with-bracket-orders-due-to-no-validation-opening-up-an-attack-to-steal-funds-sherlock-okus-new-order-types-contract-contest-git
 - https://github.com/code-423n4/2024-04-gondi-findings/issues/51
+- https://solodit.cyfrin.io/issues/h-17-refinancefulladdnewtranche-reusing-a-lenders-signature-leads-to-unintended-behavior-code4rena-gondi-gondi-git
 ###### hash-collision
 - hash collision: https://solodit.cyfrin.io/issues/hash-collision-in-the-mimc-library-fixed-consensys-none-linea-ens-markdown
 ###### insecure-dependencies
