@@ -511,4 +511,7 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - sandwiching: https://x.com/0xkaden/status/1856784539978444827
 - ERC2271 + Multicall: https://blog.thirdweb.com/vulnerability-report/
 - Uniswap v3 using spot price: https://solodit.cyfrin.io/issues/h-1-attacker-can-profit-by-manipulating-uniswap-liquidity-sherlock-steth-by-easedefi-git
+- cross function reentrancy: https://solodit.cyfrin.io/issues/h-14-mergetranchesrefinancepartial-lack-of-nonreentrant-code4rena-gondi-gondi-git
+- free memory pointer not updated: https://github.com/pashov/audits/blob/master/team/md/Biconomy-security-review_2025-11-26.md#l-03-free-memory-pointer-not-updated
+- `mstore` override: https://solodit.cyfrin.io/issues/h-01-incorrect-assembly-packing-in-getnamespace-causes-collisions-pashov-audit-group-none-biconomy_2025-11-26-markdown
 
