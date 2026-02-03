@@ -37,6 +37,7 @@
 - https://secure-contracts.com/not-so-smart-contracts/solana/index.html
 - https://github.com/0xMacro/awesome-solana-security
 - https://x.com/accretion_xyz/status/1995190604939358350
+- https://github.com/mira4sol/solana-security-examples/tree/main
 
 ## move
 - https://x.com/QuillAudits_AI/status/1909537006503199225
