@@ -61,6 +61,7 @@ Curated list of smart contract bugs which could be caught by static analyzers
 - Uniswap v4 insufficient validation (of signature?): https://solodit.cyfrin.io/issues/rebalance-mechanism-access-control-can-be-bypassed-trailofbits-none-bunni-v2-pdf
 - incorrect encoding of bytes and strings in EIP712: https://solodit.cyfrin.io/issues/m-1-incorrect-encoding-of-bytes-for-eip712-digest-in-titlegraph-causes-signatures-generated-by-common-eip712-tools-to-be-unusable-sherlock-titles-publishing-protocol-git
 - using `block.number` for nonce in permit2: https://solodit.cyfrin.io/issues/h-05-using-the-same-block-number-as-nonce-for-permit2-order-pashov-audit-group-none-bunni-august-markdown
+- https://www.gnosis.io/blog/post-mortem-gnosis-pay-vulnerability-exploit
 
 ### Unsorted
 - broken access for `updateMerkleRoot()`: https://blog.solidityscan.com/superrare-hack-analysis-488d544d89e0
